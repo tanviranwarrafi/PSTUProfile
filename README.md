@@ -10,5 +10,5 @@ they can be contacted via calling, sms and email feature.
  - ACCESS_NETWORK_STATE
  
 ## Screenshots
-<img src="screenshots/splash.jpg" width="200"> &nbsp;&nbsp; <img src="screenshots/dashboard.jpg" width="200">&nbsp;&nbsp; <img src="screenshots/students_profile/student_login.jpg" width="200">&nbsp;&nbsp; <img src="screenshots/students_profile/student_signup.jpg" width="200">
+<img src="screenshots/splash.jpg" width="195"> &nbsp;&nbsp; <img src="screenshots/dashboard.jpg" width="195">&nbsp;&nbsp; <img src="screenshots/students_profile/student_login.jpg" width="195">&nbsp;&nbsp; <img src="screenshots/students_profile/student_signup.jpg" width="195">
  
