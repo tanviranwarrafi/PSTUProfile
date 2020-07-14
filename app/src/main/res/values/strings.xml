@@ -1,0 +1,253 @@
+<resources>
+    <string name="app_name">PSTU Profile</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_name">Attention!!</string>
+    <string name="message">Do you want to update or delete</string>
+
+    <string-array name="credits">
+        <item>Credit: 0.25</item>
+        <item>Credit: 0.50</item>
+        <item>Credit: 0.75</item>
+        <item>Credit: 1.00</item>
+        <item>Credit: 1.50</item>
+        <item>Credit: 1.75</item>
+        <item>Credit: 2.00</item>
+        <item>Credit: 3.00</item>
+    </string-array>
+
+    <string-array name="semesters">
+        <item>Semester-I</item>
+        <item>Semester-II</item>
+        <item>Semester-III</item>
+        <item>Semester-IV</item>
+        <item>Semester-V</item>
+        <item>Semester-VI</item>
+        <item>Semester-VII</item>
+        <item>Semester-VIII</item>
+    </string-array>
+
+    <string-array name="batchs">
+        <item>01th Batch</item>
+        <item>02nd Batch</item>
+        <item>03rd Batch</item>
+        <item>04th Batch</item>
+        <item>05th Batch</item>
+        <item>06th Batch</item>
+        <item>07th Batch</item>
+        <item>08th Batch</item>
+        <item>09th Batch</item>
+        <item>10th Batch</item>
+        <item>11th Batch</item>
+        <item>12th Batch</item>
+        <item>13th Batch</item>
+        <item>14th Batch</item>
+        <item>15th Batch</item>
+        <item>16th Batch</item>
+        <item>17th Batch</item>
+        <item>18th Batch</item>
+        <item>19th Batch</item>
+        <item>20th Batch</item>
+    </string-array>
+
+    <string-array name="facultys">
+        <item>Agriculture</item>
+        <item>Computer Science and Engineering</item>
+        <item>Business Administration and Management</item>
+        <item>Fisharies</item>
+        <item>Disaster Management</item>
+        <item>Land Management</item>
+        <item>Nutrition and Food Science</item>
+        <item>Doctor of Veterinary Medicine</item>
+        <item>Animal Husbandry</item>
+    </string-array>
+
+    <string-array name="posts">
+        <item>Professor</item>
+        <item>Associate Professor</item>
+        <item>Assistant Professor</item>
+        <item>Lecturer</item>
+    </string-array>
+
+    <string-array name="departments">
+        <item>Department of Soil Science</item>
+        <item>Department of Agricultural Botany</item>
+        <item>Department of Entomology</item>
+        <item>Department of Agronomy</item>
+        <item>Department of Mathematics</item>
+        <item>Department of Agroforestry</item>
+        <item>Department of Horticulture</item>
+        <item>Department of Agricultural Engineering</item>
+        <item>Department of Agricultural Chemistry</item>
+        <item>Department of Agricultural Extension and Rural Development</item>
+        <item>Department of Animal Science</item>
+        <item>Department of Genetics and Plant Breeding</item>
+        <item>Department of Biotechnology</item>
+        <item>Department of Plant Pathology</item>
+        <item>Department of Statistics</item>
+
+        <item>Department of Computer Science and Information Technology</item>
+        <item>Department of Computer and Communication Engineering</item>
+        <item>Department of Electricl and Electronics Engineering</item>
+        <item>Department of Physics and Mechanical Engineering</item>
+        <item>Department of Mathematics</item>
+
+        <item>Department of Accounting and Information Systems</item>
+        <item>Department of Marketing</item>
+        <item>Department of Finance and Banking</item>
+        <item>Department of Management Studies</item>
+        <item>Department of Economics and Sociology</item>
+        <item>Department of Language and Communication</item>
+
+        <item>Department of Aquaculture</item>
+        <item>Department of Fisheries Biology and Genetics</item>
+        <item>Department of Fisheries Management</item>
+        <item>Department of Marine Fisheries and Oceanography</item>
+        <item>Department of Fisheries Technology</item>
+
+        <item>Department of and Policy and Law</item>
+        <item>Department of Land Administration</item>
+        <item>Department of Geomatics</item>
+        <item>Department of Geodesy</item>
+        <item>Department of Land Record and Transformation</item>
+
+        <item>Department of Biochemistry and Food Analysis</item>
+        <item>Department of Post Harvest Technology and Marketing</item>
+        <item>Department of Human Nutrition and Dietetics</item>
+        <item>Department of Food Microbiology</item>
+        <item>Department of Food Technology and Engineering</item>
+        <item>Department of Community Health and Hygiene</item>
+
+        <item>Department of Environmental Sanitation</item>
+        <item>Department of Environmental Science</item>
+        <item>Department of Disaster Risk Management</item>
+        <item>Department of Emergency Management</item>
+        <item>Department of Disaster Resilience and Engineering</item>
+        <item>Department of Geo Information Science and Earth Observation</item>
+
+        <item>Department of Anatomy and Histology</item>
+        <item>Department of Dairy Science</item>
+        <item>Department of Poultry Science</item>
+        <item>Department of Pathology and Parasitology</item>
+        <item>Department of Medicine Surgery and Obstetrics</item>
+        <item>Department of Basic Science</item>
+        <item>Department of Physiology and Pharmacology</item>
+        <item>Department of Genetics and Animal Breeding</item>
+        <item>Department of Microbiology and Public Health</item>
+        <item>Department of General Animal Science and Animal Nutrition</item>
+        <item>Department of Animal Products and By-Products Technology</item>
+    </string-array>
+
+    <string-array name="agriculture">
+        <item>Department of Soil Science</item>
+        <item>Department of Agricultural Botany</item>
+        <item>Department of Entomology</item>
+        <item>Department of Agronomy</item>
+        <item>Department of Mathematics</item>
+        <item>Department of Agroforestry</item>
+        <item>Department of Horticulture</item>
+        <item>Department of Agricultural Engineering</item>
+        <item>Department of Agricultural Chemistry</item>
+        <item>Department of Agricultural Extension and Rural Development</item>
+        <item>Department of Animal Science</item>
+        <item>Department of Genetics and Plant Breeding</item>
+        <item>Department of Biotechnology</item>
+        <item>Department of Plant Pathology</item>
+        <item>Department of Statistics</item>
+    </string-array>
+
+    <string-array name="CSE">
+        <item>Department of Computer Science and Information Technology</item>
+        <item>Department of Computer and Communication Engineering</item>
+        <item>Department of Electricl and Electronics Engineering</item>
+        <item>Department of Physics and Mechanical Engineering</item>
+        <item>Department of Mathematics</item>
+    </string-array>
+
+    <string-array name="bba">
+        <item>Department of Accounting and Information Systems</item>
+        <item>Department of Marketing</item>
+        <item>Department of Finance and Banking</item>
+        <item>Department of Management Studies</item>
+        <item>Department of Economics and Sociology</item>
+        <item>Department of Language and Communication</item>
+    </string-array>
+
+    <string-array name="fisharies">
+        <item>Department of Aquaculture</item>
+        <item>Department of Fisheries Biology and Genetics</item>
+        <item>Department of Fisheries Management</item>
+        <item>Department of Marine Fisheries and Oceanography</item>
+        <item>Department of Fisheries Technology</item>
+    </string-array>
+
+    <string-array name="land_management">
+        <item>Department of and Policy and Law"</item>
+        <item>Department of Land Administration</item>
+        <item>Department of Geomatics</item>
+        <item>Department of Geodesy</item>
+        <item>Department of Land Record and Transformation</item>
+    </string-array>
+
+    <string-array name="nfs">
+        <item>Department of Biochemistry and Food Analysis</item>
+        <item>Department of Post Harvest Technology and Marketing</item>
+        <item>Department of Human Nutrition and Dietetics</item>
+        <item>Department of Food Microbiology</item>
+        <item>Department of Food Technology and Engineering</item>
+        <item>Department of Community Health and Hygiene</item>
+    </string-array>
+
+
+    <string-array name="disaster_management">
+        <item>Department of Environmental Sanitation</item>
+        <item>Department of Environmental Science</item>
+        <item>Department of Disaster Risk Management</item>
+        <item>Department of Emergency Management</item>
+        <item>Department of Disaster Resilience and Engineering</item>
+        <item>Department of Geo Information Science and Earth Observation</item>
+    </string-array>
+
+    <string-array name="animal">
+        <item>Department of Anatomy and Histology</item>
+        <item>Department of Dairy Science</item>
+        <item>Department of Poultry Science</item>
+        <item>Department of Pathology and Parasitology</item>
+        <item>Department of Medicine Surgery and Obstetrics</item>
+        <item>Department of Basic Science</item>
+        <item>Department of Physiology and Pharmacology</item>
+        <item>Department of Genetics and Animal Breeding</item>
+        <item>Department of Microbiology and Public Health</item>
+        <item>Department of General Animal Science and Animal Nutrition</item>
+        <item>Department of Animal Products and By-Products Technology</item>
+    </string-array>
+
+
+    <string-array name="dvm">
+        <item>Department of Anatomy and Histology</item>
+        <item>Department of Dairy Science</item>
+        <item>Department of Poultry Science</item>
+        <item>Department of Pathology and Parasitology</item>
+        <item>Department of Medicine Surgery and Obstetrics</item>
+        <item>Department of Basic Science</item>
+        <item>Department of Physiology and Pharmacology</item>
+        <item>Department of Genetics and Animal Breeding</item>
+        <item>Department of Microbiology and Public Health</item>
+        <item>Department of General Animal Science and Animal Nutrition</item>
+        <item>Department of Animal Products and By-Products Technology</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+</resources>
