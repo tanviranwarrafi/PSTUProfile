@@ -279,6 +279,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/dean"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -300,7 +301,7 @@
                         android:layout_marginTop="30dp"
                         android:background="@color/colorAquaDark"
                         android:padding="8dp"
-                        android:text="ক্যাম্পাস"
+                        android:text="ডীন"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />

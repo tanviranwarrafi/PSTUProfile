@@ -67,7 +67,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/montserrat_light"
+        android:fontFamily="@font/bensen_handwriting"
         android:text="আপনি কি পাসওয়ার্ড ভুলে গেছেন?"
         android:textColor="@color/colorText"
         android:textSize="32px"
@@ -124,7 +124,7 @@
             android:id="@+id/no_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_light"
+            android:fontFamily="@font/bensen_handwriting"
             android:text="আপনার কোন অ্যাকাউন্ট নেই? "
             android:textColor="@color/colorText" />
 
@@ -132,7 +132,7 @@
             android:id="@+id/studentLogin_studentSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_light"
+            android:fontFamily="@font/bensen_handwriting"
             android:text="সাইন আপ করুন"
             android:textColor="@color/black"
             android:textStyle="bold" />

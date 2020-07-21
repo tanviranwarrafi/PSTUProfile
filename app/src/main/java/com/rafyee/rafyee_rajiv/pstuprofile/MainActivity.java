@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout cources;
     private LinearLayout viceChancellor;
     private LinearLayout developer;
+    private LinearLayout dean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         cources = findViewById(R.id.mainActivity_showCourses);
         viceChancellor = findViewById(R.id.vice_chancellor);
         developer = findViewById(R.id.developer);
+        dean = findViewById(R.id.dean);
 
         List<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
@@ -57,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent vcIntent = new Intent(MainActivity.this, ViceChancellor.class);
+                startActivity(vcIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
+
+        dean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent vcIntent = new Intent(MainActivity.this, Dean.class);
                 startActivity(vcIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
