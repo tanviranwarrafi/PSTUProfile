@@ -1,5 +1,7 @@
 # PSTU Profile App
 
+## This app will be updated in play store within few days
+
 This project include teachers, students and courses online database. This app will be able to find a student or teacher easily and 
 they can be contacted via calling, sms and email feature.
 
