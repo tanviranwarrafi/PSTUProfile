@@ -105,7 +105,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
+                    android:src="@drawable/agri_fish_dean"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp" />
 
@@ -122,7 +122,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
+                        android:text="@string/agriculture_dean_name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -132,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
+                        android:text="@string/agriculture_dean_designation"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -141,6 +141,117 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/cseDean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/amber_primary_dark"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/cse_dean"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush"
+                        android:text="@string/cse_dean_name"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/kalpurush"
+                        android:text="@string/cse_dean_designation"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bbaDean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/amber_primary_dark"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/bba_dean"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kalpurush"
+                        android:text="@string/bba_dean_name"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/kalpurush"
+                        android:text="@string/bba_dean_designation"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ansvmDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -158,7 +269,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
+                    android:src="@drawable/ansvm_dean"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp" />
 
@@ -175,7 +286,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
+                        android:text="@string/ansvm_dean_name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -185,7 +296,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
+                        android:text="@string/ansvm_dean_designation"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -194,6 +305,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/fishariesDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -206,12 +318,13 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
+                    android:src="@drawable/agri_fish_dean"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp" />
 
@@ -228,7 +341,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
+                        android:text="@string/fisharies_dean_name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -238,7 +351,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
+                        android:text="@string/fisharies_dean_designation"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -247,6 +360,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/disasterDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -259,12 +373,13 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
+                    android:src="@drawable/vc_sir"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp" />
 
@@ -281,7 +396,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
+                        android:text="@string/disaster_dean_name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -291,7 +406,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
+                        android:text="@string/disaster_dean_designation"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -300,6 +415,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/nfsDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -312,12 +428,13 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
+                    android:src="@drawable/vc_sir"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp" />
 
@@ -334,7 +451,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
+                        android:text="@string/nfs_dean_name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -344,7 +461,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
+                        android:text="@string/nfs_dean_designation"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -353,6 +470,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/landDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -365,12 +483,13 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
+                    android:src="@drawable/land_pgs_dean"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp" />
 
@@ -387,7 +506,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
+                        android:text="@string/land_dean_name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -397,7 +516,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
+                        android:text="@string/land_dean_designation"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
@@ -406,6 +525,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/pgsDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -418,12 +538,13 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
+                    android:src="@drawable/land_pgs_dean"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="2dp" />
 
@@ -440,7 +561,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
+                        android:text="@string/pgs_dean_name"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -450,67 +571,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
+                        android:text="@string/pgs_dean_designation"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/amber_primary_dark"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="8dp"
-                    android:src="@drawable/rafi"
-                    app:civ_border_color="@color/white"
-                    app:civ_border_width="2dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="8dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kalpurush"
-                        android:text="প্রোফেসর মোঃ জামাল হোসেন"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/kalpurush"
-                        android:text="ডীন, সিএসই অনুষদ"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
         </LinearLayout>
 
     </ScrollView>
