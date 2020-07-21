@@ -249,6 +249,7 @@
                 android:weightSum="3">
 
                 <LinearLayout
+                    android:id="@+id/vice_chancellor"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -270,7 +271,7 @@
                         android:layout_marginTop="30dp"
                         android:background="@color/colorMintDark"
                         android:padding="8dp"
-                        android:text="লাইব্রেরী"
+                        android:text="ভিসি"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />
@@ -306,6 +307,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/developer"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -327,7 +329,7 @@
                         android:layout_marginTop="30dp"
                         android:background="@color/colorPinkRoseDark"
                         android:padding="8dp"
-                        android:text="খেলাধুলা"
+                        android:text="ডেভেলপার"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />

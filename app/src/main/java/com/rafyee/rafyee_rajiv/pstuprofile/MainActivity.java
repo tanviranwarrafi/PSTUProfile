@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout teacherLogin;
     private LinearLayout showAllTeachers;
     private LinearLayout cources;
+    private LinearLayout viceChancellor;
+    private LinearLayout developer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +44,24 @@ public class MainActivity extends AppCompatActivity {
         teacherLogin = findViewById(R.id.mainActivity_teacherLogin);
         showAllTeachers = findViewById(R.id.mainActivity_showAllTeacher);
         cources = findViewById(R.id.mainActivity_showCourses);
+        viceChancellor = findViewById(R.id.vice_chancellor);
+        developer = findViewById(R.id.developer);
 
         List<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
         slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
         slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
         imageSlider.setImageList(slideModels, true);
+
+        viceChancellor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent vcIntent = new Intent(MainActivity.this, ViceChancellor.class);
+                startActivity(vcIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
 
         studentLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +108,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent courcesIntent = new Intent(MainActivity.this, ShowCourseFacultyActivity.class);
                 startActivity(courcesIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
+
+        developer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent developerIntent = new Intent(MainActivity.this, Developer.class);
+                startActivity(developerIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
