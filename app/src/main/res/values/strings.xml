@@ -48,11 +48,16 @@
     <string name="courseListItemLayout_allFaculty">কোর্স টাইটেল</string>
 
     <!-- Developer -->
+    <string name="facebook_actonbar">Facebook</string>
     <string name="facebook_account">https://www.facebook.com/tanvir.anwar.rafi</string>
+    <string name="linkedIn_actonbar">LinkedIn</string>
     <string name="linkedIn_account">https://www.linkedin.com/in/tanviranwarrafi/</string>
+    <string name="git_actonbar">Git</string>
     <string name="git_account">https://github.com/tanviranwarrafi</string>
+    <string name="instagram_actonbar">Instagram</string>
     <string name="instagram_account">https://www.instagram.com/rafyeetanvir/</string>
     <string name="skype_account">tanvir.anwar.rafi</string>
+
     <string name="pstuProfile_actonbar">PSTU Profile App</string>
     <string name="pstuProfile_app">http://bit.ly/2J8fZZj</string>
     <string name="familyContact_actionbar">পরিবার এ্যাপ</string>

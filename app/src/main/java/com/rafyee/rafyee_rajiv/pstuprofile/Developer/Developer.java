@@ -74,28 +74,49 @@ public class Developer extends AppCompatActivity {
         facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent facebookIntent = new Intent(Developer.this, DeveloperWebview.class);
+                facebookIntent.putExtra("link", getResources().getString(R.string.facebook_account));
+                facebookIntent.putExtra("actionbar_title", getResources().getString(R.string.facebook_account));
+                facebookIntent.putExtra("status_bar_color", getResources().getColor(R.color.green_primary));
+                startActivity(facebookIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
 
         git.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent gitIntent = new Intent(Developer.this, DeveloperWebview.class);
+                gitIntent.putExtra("link", getResources().getString(R.string.git_account));
+                gitIntent.putExtra("actionbar_title", getResources().getString(R.string.git_actonbar));
+                startActivity(gitIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
 
         linkedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent linkedInIntent = new Intent(Developer.this, DeveloperWebview.class);
+                linkedInIntent.putExtra("link", getResources().getString(R.string.linkedIn_account));
+                linkedInIntent.putExtra("actionbar_title", getResources().getString(R.string.linkedIn_actonbar));
+                startActivity(linkedInIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
 
         instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent instagramIntent = new Intent(Developer.this, DeveloperWebview.class);
+                instagramIntent.putExtra("link", getResources().getString(R.string.instagram_account));
+                instagramIntent.putExtra("actionbar_title", getResources().getString(R.string.instagram_actonbar));
+                startActivity(instagramIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
 
@@ -114,10 +135,10 @@ public class Developer extends AppCompatActivity {
         pstuProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent websiteIntent = new Intent(Developer.this, DeveloperWebview.class);
-                websiteIntent.putExtra("link", getResources().getString(R.string.pstuProfile_app));
-                websiteIntent.putExtra("actionbar_title", getResources().getString(R.string.pstuProfile_actonbar));
-                startActivity(websiteIntent);
+                Intent pstuProfileIntent = new Intent(Developer.this, DeveloperWebview.class);
+                pstuProfileIntent.putExtra("link", getResources().getString(R.string.pstuProfile_app));
+                pstuProfileIntent.putExtra("actionbar_title", getResources().getString(R.string.pstuProfile_actonbar));
+                startActivity(pstuProfileIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
@@ -126,10 +147,10 @@ public class Developer extends AppCompatActivity {
         familyContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent websiteIntent = new Intent(Developer.this, DeveloperWebview.class);
-                websiteIntent.putExtra("link", getResources().getString(R.string.familyContact_app));
-                websiteIntent.putExtra("actionbar_title", getResources().getString(R.string.familyContact_actionbar));
-                startActivity(websiteIntent);
+                Intent familyContactIntent = new Intent(Developer.this, DeveloperWebview.class);
+                familyContactIntent.putExtra("link", getResources().getString(R.string.familyContact_app));
+                familyContactIntent.putExtra("actionbar_title", getResources().getString(R.string.familyContact_actionbar));
+                startActivity(familyContactIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }

@@ -1,46 +1,42 @@
 package com.rafyee.rafyee_rajiv.pstuprofile.Developer;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.rafyee.rafyee_rajiv.pstuprofile.R;
 
 public class DeveloperWebview extends AppCompatActivity {
 
-    private ImageView backButton;
     private WebView webView;
     private ProgressBar websiteProgressBar;
-    TextView actionbar;
-
     private String actionbar_title, link;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.developer_webview);
         getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Intent intent = getIntent();
         actionbar_title = intent.getExtras().getString("actionbar_title");
         link = intent.getExtras().getString("link");
 
-        backButton = findViewById(R.id.developerWebview_backButton);
-        actionbar = findViewById(R.id.developerWebview_actionbarTitle);
         webView = findViewById(R.id.developerWebview_webview);
         websiteProgressBar = findViewById(R.id.developerWebview_progressBar);
-
-        /*actionbar.setText(actionbar_title);*/
 
         websiteProgressBar.setProgress(100);
         webView.loadUrl(link);
@@ -68,5 +64,13 @@ public class DeveloperWebview extends AppCompatActivity {
                 websiteProgressBar.setVisibility(View.GONE);
             }
         });
+    }
+
+    public void onBackPressed() {
+        Intent intent = new Intent(DeveloperWebview.this, Developer.class);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+        super.onBackPressed();
     }
 }
