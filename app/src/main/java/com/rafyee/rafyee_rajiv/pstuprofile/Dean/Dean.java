@@ -27,8 +27,6 @@ public class Dean extends AppCompatActivity {
     private String disaster_dean_name, disaster_dean_designation, disaster_dean_contact, disaster_dean_email, disaster_dean_fax, disaster_dean_address;
     private String pgs_dean_name, pgs_dean_designation, pgs_dean_contact, pgs_dean_email, pgs_dean_fax, pgs_dean_address;
 
-    private Drawable agriculture_dean_image, cse_dean_image, fisharies_dean_image, nfs_dean_image, bba_dean_image, ansvm_dean_image, land_dean_image, disaster_dean_image, pgs_dean_image;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +67,7 @@ public class Dean extends AppCompatActivity {
                 agricultureDeanIntent.putExtra("dean_email", agriculture_dean_email);
                 agricultureDeanIntent.putExtra("dean_fax", agriculture_dean_fax);
                 agricultureDeanIntent.putExtra("dean_address", agriculture_dean_address);
-                agricultureDeanIntent.putExtra("dean_image", String.valueOf(agriculture_dean_image));
+                agricultureDeanIntent.putExtra("dean_image", R.drawable.agri_fish_dean);
                 startActivity(agricultureDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -87,7 +85,7 @@ public class Dean extends AppCompatActivity {
                 cseDeanIntent.putExtra("dean_email", cse_dean_email);
                 cseDeanIntent.putExtra("dean_fax", cse_dean_fax);
                 cseDeanIntent.putExtra("dean_address", cse_dean_address);
-                cseDeanIntent.putExtra("dean_image", String.valueOf(cse_dean_image));
+                cseDeanIntent.putExtra("dean_image", R.drawable.cse_dean);
                 startActivity(cseDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -105,7 +103,7 @@ public class Dean extends AppCompatActivity {
                 bbaDeanIntent.putExtra("dean_email", bba_dean_email);
                 bbaDeanIntent.putExtra("dean_fax", bba_dean_fax);
                 bbaDeanIntent.putExtra("dean_address", bba_dean_address);
-                bbaDeanIntent.putExtra("dean_image", String.valueOf(bba_dean_image));
+                bbaDeanIntent.putExtra("dean_image", R.drawable.bba_dean);
                 startActivity(bbaDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -123,7 +121,7 @@ public class Dean extends AppCompatActivity {
                 ansvmDeanIntent.putExtra("dean_email", ansvm_dean_email);
                 ansvmDeanIntent.putExtra("dean_fax", ansvm_dean_fax);
                 ansvmDeanIntent.putExtra("dean_address", ansvm_dean_address);
-                ansvmDeanIntent.putExtra("dean_image", String.valueOf(ansvm_dean_image));
+                ansvmDeanIntent.putExtra("dean_image", R.drawable.ansvm_dean);
                 startActivity(ansvmDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -141,7 +139,7 @@ public class Dean extends AppCompatActivity {
                 fishariesDeanIntent.putExtra("dean_email", fisharies_dean_email);
                 fishariesDeanIntent.putExtra("dean_fax", fisharies_dean_fax);
                 fishariesDeanIntent.putExtra("dean_address", fisharies_dean_address);
-                fishariesDeanIntent.putExtra("dean_image", String.valueOf(fisharies_dean_image));
+                fishariesDeanIntent.putExtra("dean_image", R.drawable.agri_fish_dean);
                 startActivity(fishariesDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -159,7 +157,7 @@ public class Dean extends AppCompatActivity {
                 disasterDeanIntent.putExtra("dean_email", disaster_dean_email);
                 disasterDeanIntent.putExtra("dean_fax", disaster_dean_fax);
                 disasterDeanIntent.putExtra("dean_address", disaster_dean_address);
-                disasterDeanIntent.putExtra("dean_image", String.valueOf(disaster_dean_image));
+                disasterDeanIntent.putExtra("dean_image", R.drawable.vc_sir);
                 startActivity(disasterDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -177,7 +175,7 @@ public class Dean extends AppCompatActivity {
                 nfsDeanIntent.putExtra("dean_email", nfs_dean_email);
                 nfsDeanIntent.putExtra("dean_fax", nfs_dean_fax);
                 nfsDeanIntent.putExtra("dean_address", nfs_dean_address);
-                nfsDeanIntent.putExtra("dean_image", String.valueOf(nfs_dean_image));
+                nfsDeanIntent.putExtra("dean_image", R.drawable.vc_sir);
                 startActivity(nfsDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -195,7 +193,7 @@ public class Dean extends AppCompatActivity {
                 landDeanIntent.putExtra("dean_email", land_dean_email);
                 landDeanIntent.putExtra("dean_fax", land_dean_fax);
                 landDeanIntent.putExtra("dean_address", land_dean_address);
-                landDeanIntent.putExtra("dean_image", String.valueOf(land_dean_image));
+                landDeanIntent.putExtra("dean_image", R.drawable.land_pgs_dean);
                 startActivity(landDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -213,7 +211,7 @@ public class Dean extends AppCompatActivity {
                 pgsDeanIntent.putExtra("dean_email", pgs_dean_email);
                 pgsDeanIntent.putExtra("dean_fax", pgs_dean_fax);
                 pgsDeanIntent.putExtra("dean_address", pgs_dean_address);
-                pgsDeanIntent.putExtra("dean_image", String.valueOf(pgs_dean_image));
+                pgsDeanIntent.putExtra("dean_image", R.drawable.land_pgs_dean);
                 startActivity(pgsDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -237,7 +235,6 @@ public class Dean extends AppCompatActivity {
         agriculture_dean_email = getResources().getString(R.string.agriculture_dean_email);
         agriculture_dean_fax = getResources().getString(R.string.agriculture_dean_fax);
         agriculture_dean_address = getResources().getString(R.string.agriculture_dean_address);
-        agriculture_dean_image = getResources().getDrawable(R.drawable.agri_fish_dean);
 
         cse_dean_name = getResources().getString(R.string.cse_dean_name);
         cse_dean_designation = getResources().getString(R.string.cse_dean_designation);
@@ -245,7 +242,6 @@ public class Dean extends AppCompatActivity {
         cse_dean_email = getResources().getString(R.string.cse_dean_email);
         cse_dean_fax = getResources().getString(R.string.cse_dean_fax);
         cse_dean_address = getResources().getString(R.string.cse_dean_address);
-        cse_dean_image = getResources().getDrawable(R.drawable.cse_dean);
 
         nfs_dean_name = getResources().getString(R.string.nfs_dean_name);
         nfs_dean_designation = getResources().getString(R.string.nfs_dean_designation);
@@ -253,7 +249,6 @@ public class Dean extends AppCompatActivity {
         nfs_dean_email = getResources().getString(R.string.nfs_dean_email);
         nfs_dean_fax = getResources().getString(R.string.nfs_dean_fax);
         nfs_dean_address = getResources().getString(R.string.nfs_dean_address);
-        nfs_dean_image = getResources().getDrawable(R.drawable.vc_sir);
 
         bba_dean_name = getResources().getString(R.string.bba_dean_name);
         bba_dean_designation = getResources().getString(R.string.bba_dean_designation);
@@ -261,7 +256,6 @@ public class Dean extends AppCompatActivity {
         bba_dean_email = getResources().getString(R.string.bba_dean_email);
         bba_dean_fax = getResources().getString(R.string.bba_dean_fax);
         bba_dean_address = getResources().getString(R.string.bba_dean_address);
-        bba_dean_image = getResources().getDrawable(R.drawable.bba_dean);
 
         fisharies_dean_name = getResources().getString(R.string.cse_dean_name);
         fisharies_dean_designation = getResources().getString(R.string.fisharies_dean_designation);
@@ -269,7 +263,6 @@ public class Dean extends AppCompatActivity {
         fisharies_dean_email = getResources().getString(R.string.fisharies_dean_email);
         fisharies_dean_fax = getResources().getString(R.string.fisharies_dean_fax);
         fisharies_dean_address = getResources().getString(R.string.fisharies_dean_address);
-        fisharies_dean_image = getResources().getDrawable(R.drawable.agri_fish_dean);
 
         ansvm_dean_name = getResources().getString(R.string.ansvm_dean_name);
         ansvm_dean_designation = getResources().getString(R.string.ansvm_dean_designation);
@@ -277,7 +270,6 @@ public class Dean extends AppCompatActivity {
         ansvm_dean_email = getResources().getString(R.string.ansvm_dean_email);
         ansvm_dean_fax = getResources().getString(R.string.ansvm_dean_fax);
         ansvm_dean_address = getResources().getString(R.string.ansvm_dean_address);
-        ansvm_dean_image = getResources().getDrawable(R.drawable.ansvm_dean);
 
         land_dean_name = getResources().getString(R.string.land_dean_name);
         land_dean_designation = getResources().getString(R.string.land_dean_designation);
@@ -285,7 +277,6 @@ public class Dean extends AppCompatActivity {
         land_dean_email = getResources().getString(R.string.land_dean_email);
         land_dean_fax = getResources().getString(R.string.land_dean_fax);
         land_dean_address = getResources().getString(R.string.land_dean_address);
-        land_dean_image = getResources().getDrawable(R.drawable.land_pgs_dean);
 
         disaster_dean_name = getResources().getString(R.string.disaster_dean_name);
         disaster_dean_designation = getResources().getString(R.string.disaster_dean_designation);
@@ -293,7 +284,6 @@ public class Dean extends AppCompatActivity {
         disaster_dean_email = getResources().getString(R.string.disaster_dean_email);
         disaster_dean_fax = getResources().getString(R.string.disaster_dean_fax);
         disaster_dean_address = getResources().getString(R.string.disaster_dean_address);
-        disaster_dean_image = getResources().getDrawable(R.drawable.vc_sir);
 
         pgs_dean_name = getResources().getString(R.string.pgs_dean_name);
         pgs_dean_designation = getResources().getString(R.string.pgs_dean_designation);
@@ -301,7 +291,6 @@ public class Dean extends AppCompatActivity {
         pgs_dean_email = getResources().getString(R.string.pgs_dean_email);
         pgs_dean_fax = getResources().getString(R.string.pgs_dean_fax);
         pgs_dean_address = getResources().getString(R.string.pgs_dean_address);
-        pgs_dean_image = getResources().getDrawable(R.drawable.land_pgs_dean);
 
     }
 }

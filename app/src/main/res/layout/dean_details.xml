@@ -101,11 +101,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="220dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginRight="32dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:elevation="8dp"
+                android:backgroundTint="@color/amber_primary_dark"
                 android:background="@drawable/border"
                 android:orientation="horizontal">
 
@@ -116,7 +117,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:src="@drawable/call_round"
-                    android:tint="@color/amber_primary_dark" />
+                    android:tint="@color/white" />
 
                 <ImageView
                     android:id="@+id/deanDetails_deanSMS"
@@ -125,7 +126,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:src="@drawable/send_message"
-                    android:tint="@color/amber_primary_dark" />
+                    android:tint="@color/white" />
 
                 <ImageView
                     android:id="@+id/deanDetails_deanEmail"
@@ -134,7 +135,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:src="@drawable/email_24"
-                    android:tint="@color/amber_primary_dark" />
+                    android:tint="@color/white" />
 
                 <ImageView
                     android:id="@+id/deanDetails_deanFax"
@@ -143,7 +144,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:src="@drawable/fax"
-                    android:tint="@color/amber_primary_dark"/>
+                    android:tint="@color/white"/>
             </LinearLayout>
 
     </RelativeLayout>

@@ -98,7 +98,7 @@
 
         <FrameLayout
             android:id="@+id/frameLayout"
-            android:layout_width="150dp"
+            android:layout_width="220dp"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="16dp"
@@ -126,7 +126,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/bensen_handwriting"
                 android:gravity="center"
-                android:text="ম্যাসেজ"
+                android:text="ভাইস-চ্যান্সেলরের ম্যাসেজ"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />

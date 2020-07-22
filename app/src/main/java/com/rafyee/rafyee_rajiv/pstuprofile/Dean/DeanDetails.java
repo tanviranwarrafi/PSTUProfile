@@ -23,7 +23,7 @@ public class DeanDetails extends AppCompatActivity {
     private ImageView call, sms, email, fax;
     private TextView deanContactNo, deanEmailAddress, deanFax, deanAddress;
 
-    private String dean_name, dean_designation, dean_contact, dean_email, dean_fax, dean_address, dean_image_string, dean_contact_english;
+    private String dean_name, dean_designation, dean_contact, dean_email, dean_fax, dean_address, dean_contact_english;
     private int dean_image;
 
     @Override
@@ -39,8 +39,8 @@ public class DeanDetails extends AppCompatActivity {
         dean_email = intent.getExtras().getString("dean_email");
         dean_fax = intent.getExtras().getString("dean_fax");
         dean_address = intent.getExtras().getString("dean_address");
-        dean_image_string = intent.getExtras().getString("dean_image");
-        /*dean_image = Integer.parseInt(dean_image_string);*/
+
+        int dean_image = intent.getExtras().getInt("dean_image");
 
         dean_contact_english = intent.getExtras().getString("dean_contact_english");
 
@@ -57,12 +57,12 @@ public class DeanDetails extends AppCompatActivity {
         deanFax = findViewById(R.id.denaDetails_faxNumber);
         deanAddress = findViewById(R.id.denaDetails_address);
 
-//        deanImage.setImageResource(dean_image);
+        deanImage.setImageResource(dean_image);
         deanName.setText(dean_name);
         deanDesignation.setText(dean_designation);
         deanContactNo.setText(dean_contact);
         deanEmailAddress.setText(dean_email);
-        deanFax.setText(dean_fax);
+        deanFax.setText(dean_fax + " ফ্যাক্স নম্বর");
         deanAddress.setText(dean_address);
 
         call.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +97,7 @@ public class DeanDetails extends AppCompatActivity {
         fax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DeanDetails.this, "এই ফিচারটি এখনো নির্মানাধীন", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DeanDetails.this, "ফ্যাক্স ফিচারটি এখনো নির্মানাধীন", Toast.LENGTH_SHORT).show();
             }
         });
 
