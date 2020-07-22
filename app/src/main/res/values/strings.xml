@@ -139,7 +139,11 @@
     <!-- Developer Webview-->
     <string name="developerWebview_website">ওয়েবসাইট</string>
 
-
+    <!-- Dialog Details-->
+    <string name="dialogDetails_courseDetails">কোর্স ডিটেইলস</string>
+    <string name="dialogDetails_courseTitle">কোর্স টাইটেল</string>
+    <string name="dialogDetails_courseCredit">3 Credit Hour</string>
+    <string name="dialogDetails_courseCode">Physics-I</string>
 
 
 
