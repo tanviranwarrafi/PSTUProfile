@@ -21,10 +21,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="পটুয়াখালি বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়"
+        android:text="পবিপ্রবি"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="45sp"
+        android:fontFamily="@font/bensen_handwriting"
         android:textStyle="bold" />
 
 </LinearLayout>

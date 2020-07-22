@@ -15,6 +15,7 @@
             android:text="কোর্স টাইটেল"
             android:paddingLeft="16dp"
             android:paddingTop="8dp"
+            android:fontFamily="@font/kalpurush"
             android:paddingBottom="8dp"
             android:textSize="18sp"
             android:textStyle="bold"

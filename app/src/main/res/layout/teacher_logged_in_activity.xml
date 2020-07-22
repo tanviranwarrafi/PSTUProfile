@@ -48,6 +48,7 @@
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
         android:text="প্রোফাইল"
+        android:fontFamily="@font/bensen_handwriting"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -85,6 +86,7 @@
                 android:paddingLeft="20dp"
                 android:text="শিক্ষকের নাম"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -109,6 +111,7 @@
                 android:paddingLeft="20dp"
                 android:text="ডেজিগনেশন"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -133,6 +136,7 @@
                 android:paddingLeft="20dp"
                 android:text="ফ্যাকাল্টি"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -157,6 +161,7 @@
                 android:paddingLeft="20dp"
                 android:text="ডিপার্টমেন্ট"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -181,6 +186,7 @@
                 android:paddingLeft="20dp"
                 android:text="পাসওয়ার্ড"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -205,6 +211,7 @@
                 android:paddingLeft="20dp"
                 android:text="ই-মেইল এডড্রেস"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -229,6 +236,7 @@
                 android:paddingLeft="20dp"
                 android:text="মোবাইল নম্বর"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -263,7 +271,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/kalpurush"
+            android:fontFamily="@font/bensen_handwriting"
             android:gravity="center"
             android:paddingRight="32dp"
             android:text="আপডেট"

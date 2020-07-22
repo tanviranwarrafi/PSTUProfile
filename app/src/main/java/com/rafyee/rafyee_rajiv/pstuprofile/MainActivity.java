@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.rafyee.rafyee_rajiv.pstuprofile.Dean.Dean;
 import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowAllStudentsActivity;
 import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowAllTeachersActivity;
 import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowCourseFacultyActivity;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout viceChancellor;
     private LinearLayout developer;
     private LinearLayout dean;
+    private LinearLayout website;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         viceChancellor = findViewById(R.id.vice_chancellor);
         developer = findViewById(R.id.developer);
         dean = findViewById(R.id.dean);
+        website = findViewById(R.id.pstu_website);
 
         List<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
@@ -130,6 +133,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent developerIntent = new Intent(MainActivity.this, Developer.class);
                 startActivity(developerIntent);
+                finish();
+                overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
+
+        website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent websiteIntent = new Intent(MainActivity.this, Website.class);
+                startActivity(websiteIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }

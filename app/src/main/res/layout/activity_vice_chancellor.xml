@@ -19,7 +19,7 @@
 
         <ImageView
             android:id="@+id/viceChancellor_backButton"
-            android:layout_width="25dp"
+            android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
             android:src="@drawable/left_arrow"
@@ -37,7 +37,7 @@
             android:text="ভাইস-চ্যান্সেলর"
             android:textAlignment="textStart"
             android:textColor="@color/white"
-            android:textSize="22dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/activityDeanDetails_backButton"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,8 +109,8 @@
             android:elevation="8dp">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="7dp"
                 android:background="@drawable/bg_circle"
@@ -128,7 +128,7 @@
                 android:gravity="center"
                 android:text="ম্যাসেজ"
                 android:textColor="@color/white"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </FrameLayout>
@@ -147,7 +147,7 @@
         android:lineSpacingExtra="1dp"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:text="I warmly welcome you to the Patuakhali Science and Technology University (PSTU). It is one of the fast growing new public universities in Bangladesh. The university was inaugurated on 08 July 2000 by the then Hon’ble Prime Minister, Government of the People’s Republic of Bangladesh,  Her Excellency Sheikh Hasina and started its academic activities on 26 February 2002."
+        android:text="পটুয়াখালী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ে (পিএসটিইউ) আপনাকে আন্তরিকভাবে স্বাগতম জানাই। এটি বাংলাদেশের দ্রুত বর্ধমান নতুন পাবলিক বিশ্ববিদ্যালয়গুলির মধ্যে একটি। এই বিশ্ববিদ্যালয়ের উদ্বোধন করা হয়েছিল ২০০৮ সালের ৮ জুলাই তৎকালীন মাননীয় প্রধানমন্ত্রী, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার, মহামান্য শেখ হাসিনা এবং ২৬শে ফেব্রুয়ারী ২০০২ এ তার একাডেমিক কার্যক্রম শুরু করেছিলেন।"
         android:textAlignment="inherit"
         android:textAllCaps="false"
         android:textDirection="ltr"
@@ -231,6 +231,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginRight="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -239,14 +244,14 @@
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/call_round"
-                android:tint="@color/colorPrimary" />
+                android:tint="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
                 android:text="কল"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -256,6 +261,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -264,14 +275,14 @@
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/send_message"
-                android:tint="@color/colorPrimary" />
+                android:tint="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
                 android:text="এসএমএস"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -281,6 +292,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginLeft="8dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -289,14 +305,14 @@
                 android:layout_height="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/email_24"
-                android:tint="@color/colorPrimary" />
+                android:tint="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_regular"
                 android:text="ই-মেইল"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>

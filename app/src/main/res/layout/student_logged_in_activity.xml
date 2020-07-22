@@ -48,6 +48,7 @@
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
         android:text="প্রোফাইল"
+        android:fontFamily="@font/bensen_handwriting"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -86,6 +87,7 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="ছাত্র-ছাত্রীর নাম"
+                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -111,6 +113,7 @@
                 android:paddingLeft="20dp"
                 android:text="ক্যাম্পাস আইডি নম্বর"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -134,6 +137,7 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="রেজিস্ট্রেশন নম্বর"
+                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -158,6 +162,7 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="পাসওয়ার্ড"
+                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -182,6 +187,7 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="ফ্যাকাল্টি"
+                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -206,6 +212,7 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="বযাচ"
+                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -230,6 +237,7 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="মোবাইল নম্বর"
+                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -254,6 +262,7 @@
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
                 android:text="ই-মেইল এডড্রেস"
+                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -289,7 +298,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/kalpurush"
+            android:fontFamily="@font/bensen_handwriting"
             android:gravity="center"
             android:paddingRight="32dp"
             android:text="আপডেট"

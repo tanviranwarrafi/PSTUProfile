@@ -78,7 +78,7 @@
 
         <ImageView
             android:id="@+id/studentPersonalDetails_backButton"
-            android:layout_width="25dp"
+            android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
             android:src="@drawable/left_arrow"
@@ -91,11 +91,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:fontFamily="@font/kalpurush"
+            android:fontFamily="@font/bensen_handwriting"
             android:text="শিক্ষক প্রোফাইল"
             android:textAlignment="textStart"
             android:textColor="@color/white"
-            android:textSize="22dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -146,6 +146,7 @@
                 android:paddingLeft="20dp"
                 android:text="শিক্ষকের নাম"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -170,6 +171,7 @@
                 android:paddingLeft="20dp"
                 android:text="ডেজিগনেশন"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -194,6 +196,7 @@
                 android:paddingLeft="20dp"
                 android:text="ফ্যাকাল্টি"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -218,6 +221,7 @@
                 android:paddingLeft="20dp"
                 android:text="ডিপার্টমেন্ট"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -242,6 +246,7 @@
                 android:paddingLeft="20dp"
                 android:text="ই-মেইল এডড্রেস"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -266,6 +271,7 @@
                 android:paddingLeft="20dp"
                 android:text="মোবাইল নম্বর"
                 android:textColor="@color/colorText"
+                android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
@@ -306,12 +312,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/kalpurush"
+                android:fontFamily="@font/bensen_handwriting"
                 android:gravity="center"
                 android:text="ফোন কল"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -342,12 +348,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/kalpurush"
+                android:fontFamily="@font/bensen_handwriting"
                 android:gravity="center"
                 android:text="এসএমএস"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -377,12 +383,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/kalpurush"
+                android:fontFamily="@font/bensen_handwriting"
                 android:gravity="center"
                 android:text="ই-মেইল"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>

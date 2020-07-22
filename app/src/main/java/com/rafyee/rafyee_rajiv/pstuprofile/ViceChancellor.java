@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.rafyee.rafyee_rajiv.pstuprofile.Dean.Dean;
+import com.rafyee.rafyee_rajiv.pstuprofile.Dean.DeanDetails;
 import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowAllStudentsActivity;
 import com.rafyee.rafyee_rajiv.pstuprofile.all_user.StudentPersonalDetailsActivity;
 
@@ -73,5 +75,13 @@ public class ViceChancellor extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_from_right,R.anim.slideout_from_left);
             }
         });
+    }
+
+    public void onBackPressed() {
+        Intent intent = new Intent(ViceChancellor.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+        super.onBackPressed();
     }
 }

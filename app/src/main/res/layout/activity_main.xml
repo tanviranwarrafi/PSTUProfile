@@ -47,9 +47,10 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="8dp"
+                    android:fontFamily="@font/bensen_handwriting"
                     android:text="পটুয়াখালি বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="normal" />
             </LinearLayout>
 
@@ -60,40 +61,12 @@
                 android:weightSum="3">
 
                 <LinearLayout
-                    android:id="@+id/mainActivity_studentLogin"
+                    android:id="@+id/vice_chancellor"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
                     android:layout_weight="1"
-                    android:background="@color/colorGrapeFruit"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:src="@drawable/ic_illustration_login" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="30dp"
-                        android:background="@color/colorGrapeFruitDark"
-                        android:padding="8dp"
-                        android:text="শিক্ষার্থী লগিন"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/mainActivity_showAllStudent"
-                    android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorBitterSweet"
+                    android:background="@color/colorMint"
                     android:orientation="vertical">
 
                     <ImageView
@@ -101,16 +74,50 @@
                         android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="20dp"
-                        android:src="@drawable/student_login"
+                        android:src="@drawable/ic_icon_football"
                         android:tint="@color/colorWhite" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="30dp"
-                        android:background="@color/colorBitterSweetDark"
+                        android:background="@color/colorMintDark"
                         android:padding="8dp"
-                        android:text="সকল শিক্ষার্থী"
+                        android:text="ভিসি"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dean"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAqua"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_icon_football"
+                        android:tint="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/colorAquaDark"
+                        android:padding="8dp"
+                        android:text="ডীন"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />
@@ -139,6 +146,8 @@
                         android:background="@color/colorFlowerDark"
                         android:padding="8dp"
                         android:text="শিক্ষক লগিন"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />
@@ -175,11 +184,82 @@
                         android:background="@color/colorGrassDark"
                         android:padding="8dp"
                         android:text="সকল শিক্ষক"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainActivity_studentLogin"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorGrapeFruit"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_illustration_login" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/colorGrapeFruitDark"
+                        android:padding="8dp"
+                        android:text="শিক্ষার্থী লগিন"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainActivity_showAllStudent"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBitterSweet"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/student_login"
+                        android:tint="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/colorBitterSweetDark"
+                        android:padding="8dp"
+                        android:text="সকল শিক্ষার্থী"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <LinearLayout
                     android:id="@+id/mainActivity_showCourses"
@@ -204,6 +284,8 @@
                         android:background="@color/colorBlueJeansDark"
                         android:padding="8dp"
                         android:text="সকল কোর্স"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />
@@ -211,6 +293,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/pstu_website"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -232,79 +315,13 @@
                         android:layout_marginTop="30dp"
                         android:background="@color/colorLavanderDark"
                         android:padding="8dp"
-                        android:text="প্রশাসনিক"
+                        android:text="ওয়েবসাইট"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />
 
-                </LinearLayout>
-
-            </LinearLayout>
-            <!-- End Second Row-->
-            <!-- Third Row-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <LinearLayout
-                    android:id="@+id/vice_chancellor"
-                    android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorMint"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:src="@drawable/ic_icon_football"
-                        android:tint="@color/colorWhite" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="30dp"
-                        android:background="@color/colorMintDark"
-                        android:padding="8dp"
-                        android:text="ভিসি"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/dean"
-                    android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorAqua"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:src="@drawable/ic_icon_football"
-                        android:tint="@color/colorWhite" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="30dp"
-                        android:background="@color/colorAquaDark"
-                        android:padding="8dp"
-                        android:text="ডীন"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -331,6 +348,8 @@
                         android:background="@color/colorPinkRoseDark"
                         android:padding="8dp"
                         android:text="ডেভেলপার"
+                        android:fontFamily="@font/bensen_handwriting"
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         android:textSize="18sp" />
