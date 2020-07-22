@@ -31,6 +31,22 @@
     <string name="courseDetails_facultyName">ফ্যাকাল্টির নাম</string>
     <string name="courseDetails_seeAllCourse">সকল কোর্স দেখুন</string>
 
+    <!-- Course Faculty -->
+    <string name="courseFaculty_allFaculty">অনুষদ লিস্ট</string>
+    <string name="courseFaculty_agriculture">এগ্রিকালচার</string>
+    <string name="courseFaculty_cse">সিএসই</string>
+    <string name="courseFaculty_bba">বিবিএ</string>
+    <string name="courseFaculty_nfs">এনএফএস</string>
+    <string name="courseFaculty_esdm">ডিজাস্টার ম্যানেজমেন্ট</string>
+    <string name="courseFaculty_dvm">ভ্যাটেনারি মেডিসিন</string>
+    <string name="courseFaculty_fisharies">ফিসারিজ</string>
+    <string name="courseFaculty_land">ল্যান্ড ম্যানেজমেন্ত</string>
+    <string name="courseFaculty_animal">এনিম্যাজ হ্যাজবেন্ডারী</string>
+    <string name="courseFaculty_upcomingFaculty">upcoming faculty</string>
+
+    <!-- Course List Item Layout -->
+    <string name="courseListItemLayout_allFaculty">কোর্স টাইটেল</string>
+
     <!-- Developer -->
     <string name="facebook_account">https://www.facebook.com/tanvir.anwar.rafi</string>
     <string name="linkedIn_account">https://www.linkedin.com/in/tanviranwarrafi/</string>
@@ -43,6 +59,8 @@
     <string name="familyContact_app">https://bit.ly/2zuBDFZ</string>
 
     <!-- Dean -->
+    <string name="dean_deanList">ডীন লিস্ট</string>
+
     <string name="agriculture_dean_name">প্রফেসর ড. গোলাম রব্বানী আকন্দ</string>
     <string name="agriculture_dean_designation">ডীন, কৃষি অনুষদ</string>
     <string name="agriculture_dean_contact">০১৭১৬৯৫০৭২৭</string>
@@ -78,14 +96,14 @@
     <string name="fisharies_dean_fax">২৩৬</string>
     <string name="fisharies_dean_address">ঠিকানা পাওয়া যায় নি</string>
 
-    <string name="disaster_dean_name">প্রফেসরম ড. মোঃ হারুন-অর-রশিদ</string>
+    <string name="disaster_dean_name">প্রফেসর ড. মোঃ হারুন-অর-রশিদ</string>
     <string name="disaster_dean_designation">ডীন, ইএসডিএম অনুষদ</string>
     <string name="disaster_dean_contact">০৪৪৫৬০১০</string>
     <string name="disaster_dean_email">deandm@pstu.ac.bd</string>
     <string name="disaster_dean_fax">কোন ফ্যাক্স পাওয়া যায় নি</string>
     <string name="disaster_dean_address">ঠিকানা পাওয়া যায় নি</string>
 
-    <string name="nfs_dean_name">প্রফেসরম ড. মোঃ হারুন-অর-রশিদ</string>
+    <string name="nfs_dean_name">প্রফেসর ড. মোঃ হারুন-অর-রশিদ</string>
     <string name="nfs_dean_designation">ডীন, এনএফএস অনুষদ</string>
     <string name="nfs_dean_contact">০৪৪২৭৫৬০১২</string>
     <string name="nfs_dean_email">deannfs@pstu.ac.bd</string>
@@ -105,6 +123,36 @@
     <string name="pgs_dean_email">deanpgs@pstu.ac.bd</string>
     <string name="pgs_dean_fax">কোন ফ্যাক্স পাওয়া যায় নি</string>
     <string name="pgs_dean_address">ঠিকানা পাওয়া যায় নি</string>
+
+    <!-- Dean Details -->
+    <string name="deanDetails_deanDetails">ডীন ডিটেইলস</string>
+
+    <!-- Developer -->
+    <string name="developer_developerName">মোঃ তানভীর আনোয়ার রাফি</string>
+    <string name="developer_androidDeveloper">এন্ড্রয়েড ডেভেলপার</string>
+    <string name="developer_gobackToDashBoard">ড্যাশবোর্ডে ফিরে যান</string>
+    <string name="developer_01521438885">০১৫২১৪৩৮৮৮৫</string>
+    <string name="developer_developerEmail">tanviranwarrafi@gmail.com</string>
+    <string name="developer_developerAddress">নয়াপাড়া, জামালপুর-২০০০</string>
+    <string name="developer_playStoreApp">প্লে-স্টোর এ্যাপ</string>
+
+    <!-- Developer Webview-->
+    <string name="developerWebview_website">ওয়েবসাইট</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <string-array name="credits">

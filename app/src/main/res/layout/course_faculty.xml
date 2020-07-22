@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:fontFamily="@font/bensen_handwriting"
-            android:text="অনুষদ"
+            android:text="@string/courseFaculty_allFaculty"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -110,7 +110,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="এগ্রিকালচার" />
+                            android:text="@string/courseFaculty_agriculture" />
 
                         <ImageView
                             android:layout_width="60dp"
@@ -140,7 +140,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/bensen_handwriting"
-                            android:text="সিএসই"
+                            android:text="@string/courseFaculty_cse"
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold" />
@@ -188,7 +188,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="বিবিএ" />
+                            android:text="@string/courseFaculty_bba" />
 
                         <ImageView
                             android:layout_width="60dp"
@@ -223,7 +223,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="এনএফএস"/>
+                            android:text="@string/courseFaculty_nfs"/>
 
                         <ImageView
                             android:layout_width="60dp"
@@ -268,7 +268,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="ডিজাস্টার ম্যানেজমেন্ট" />
+                            android:text="@string/courseFaculty_esdm" />
 
                         <ImageView
                             android:layout_width="60dp"
@@ -303,7 +303,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="ভ্যাটেনারি মেডিসিন" />
+                            android:text="@string/courseFaculty_dvm" />
 
                         <ImageView
                             android:layout_width="60dp"
@@ -348,7 +348,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="ফিসারিজ"/>
+                            android:text="@string/courseFaculty_fisharies"/>
 
                         <ImageView
                             android:layout_width="60dp"
@@ -381,7 +381,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="ল্যান্ড ম্যানেজমেন্ত" />
+                            android:text="@string/courseFaculty_land" />
 
                         <ImageView
                             android:layout_width="80dp"
@@ -425,7 +425,7 @@
                             android:textSize="18sp"
                             android:textColor="@color/colorText"
                             android:textStyle="bold"
-                            android:text="এনিম্যাজ হ্যাজবেন্ডারী"/>
+                            android:text="@string/courseFaculty_animal"/>
 
                         <ImageView
                             android:layout_width="60dp"
@@ -470,7 +470,7 @@
                             android:textColor="@color/amber_primary_dark"
                             android:textStyle="bold"
                             android:gravity="center"
-                            android:text="upcoming faculty" />
+                            android:text="@string/courseFaculty_upcomingFaculty" />
 
                     </LinearLayout>
 
