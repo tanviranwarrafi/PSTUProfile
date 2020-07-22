@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/studentPersonalDetails_backButton"
+            android:id="@+id/teacherPersonalDetails_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -50,7 +50,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/bensen_handwriting"
             android:text="@string/teacherDetails_teacherProfile"
             android:textAlignment="textStart"
@@ -60,7 +60,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/studentPersonalDetails_backButton"
+            app:layout_constraintStart_toEndOf="@+id/teacherPersonalDetails_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
