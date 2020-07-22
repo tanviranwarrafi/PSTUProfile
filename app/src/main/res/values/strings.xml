@@ -1,7 +1,46 @@
 <resources>
     <string name="app_name">PSTU Profile</string>
+
     <string name="title_name">Attention!!</string>
     <string name="message">Do you want to update or delete</string>
+
+    <!-- Main Activity -->
+    <string name="pstu_website_link">https://www.pstu.ac.bd/</string>
+    <string name="mainActivity_pstu_website_title">পবিপ্রবি ওয়েবসাইট</string>
+    <string name="mainActivity_pstu">পটুয়াখালি বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়</string>
+    <string name="mainActivity_vc">ভিসি</string>
+    <string name="mainActivity_dean">ডীন</string>
+    <string name="mainActivity_teacherLogin">শিক্ষক লগিন</string>
+    <string name="mainActivity_allTeacher">সকল শিক্ষক</string>
+    <string name="mainActivity_studentLogin">শিক্ষার্থী লগিন</string>
+    <string name="mainActivity_allStudents">সকল শিক্ষার্থী</string>
+    <string name="mainActivity_allCourse">সকল কোর্স</string>
+    <string name="mainActivity_website">ওয়েবসাইট</string>
+    <string name="mainActivity_developer">ডেভেলপার</string>
+
+
+    <!-- All Students -->
+    <string name="allStudents_allStudents">সকল শিক্ষার্থী</string>
+    <string name="allStudents_seeAllStudents">শিক্ষার্থীদের দেখুন</string>
+
+    <!-- All Teachers -->
+    <string name="allTeachers_allTeachers">শিক্ষকবৃন্দ</string>
+    <string name="allTeachers_seeAllTeachers">শিক্ষকদের দেখুন</string>
+
+    <!-- Course Details -->
+    <string name="courseDetails_facultyName">ফ্যাকাল্টির নাম</string>
+    <string name="courseDetails_seeAllCourse">সকল কোর্স দেখুন</string>
+
+    <!-- Developer -->
+    <string name="facebook_account">https://www.facebook.com/tanvir.anwar.rafi</string>
+    <string name="linkedIn_account">https://www.linkedin.com/in/tanviranwarrafi/</string>
+    <string name="git_account">https://github.com/tanviranwarrafi</string>
+    <string name="instagram_account">https://www.instagram.com/rafyeetanvir/</string>
+    <string name="skype_account">tanvir.anwar.rafi</string>
+    <string name="pstuProfile_actonbar">PSTU Profile App</string>
+    <string name="pstuProfile_app">http://bit.ly/2J8fZZj</string>
+    <string name="familyContact_actionbar">পরিবার এ্যাপ</string>
+    <string name="familyContact_app">https://bit.ly/2zuBDFZ</string>
 
     <!-- Dean -->
     <string name="agriculture_dean_name">প্রফেসর ড. গোলাম রব্বানী আকন্দ</string>

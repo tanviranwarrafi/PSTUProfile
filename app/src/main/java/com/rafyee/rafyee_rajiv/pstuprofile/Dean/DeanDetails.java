@@ -5,16 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.rafyee.rafyee_rajiv.pstuprofile.MainActivity;
 import com.rafyee.rafyee_rajiv.pstuprofile.R;
-import com.rafyee.rafyee_rajiv.pstuprofile.ViceChancellor;
-import com.rafyee.rafyee_rajiv.pstuprofile.teacher_profile.TeacherLoggedInActivity;
 
 public class DeanDetails extends AppCompatActivity {
 

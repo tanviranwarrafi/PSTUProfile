@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentUpdate">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_illustration_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/studentLoggedInPersonalUpdate_studentBackButton"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/left_arrow"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/bensen_handwriting"
+            android:text="শিক্ষার্থী আপডেট"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/studentLoggedInPersonalUpdate_studentBackButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/studentLoggedInPersonalUpdate_studentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/just_border"
+        android:drawableLeft="@drawable/person_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorText"
+        android:elevation="3dp"
+        android:ems="10"
+        android:fontFamily="@font/kalpurush"
+        android:hint="ছাত্র-ছাত্রীর নাম"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <EditText
+        android:id="@+id/studentLoggedInPersonalUpdate_studentPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="নতুন পাসওয়ার্ড"
+        android:inputType="textPassword"
+        android:background="@drawable/just_border"
+        android:drawableLeft="@drawable/lock_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorText"
+        android:elevation="3dp"
+        android:ems="10"
+        android:fontFamily="@font/kalpurush"
+        android:padding="8dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentName" />
+
+    <EditText
+        android:id="@+id/studentLoggedInPersonalUpdate_studentContactNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="নতুন মোবাইল নম্বর"
+        android:inputType="phone"
+        android:layout_gravity="center"
+        android:background="@drawable/just_border"
+        android:drawableLeft="@drawable/android_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorText"
+        android:elevation="3dp"
+        android:ems="10"
+        android:fontFamily="@font/kalpurush"
+        android:padding="8dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentPassword" />
+
+    <EditText
+        android:id="@+id/studentLoggedInPersonalUpdate_studentEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="নতুন ই-মেইল এডড্রেস"
+        android:inputType="textWebEmailAddress"
+        android:layout_gravity="center"
+        android:background="@drawable/just_border"
+        android:drawableLeft="@drawable/email_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorText"
+        android:elevation="3dp"
+        android:ems="10"
+        android:fontFamily="@font/kalpurush"
+        android:padding="8dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentContactNo" />
+
+    <LinearLayout
+        android:id="@+id/studentLoggedInPersonalUpdate_studentUpdateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/amber_primary_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentEmailAddress">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/update"
+            android:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bensen_handwriting"
+            android:gravity="center"
+            android:text="আপডেট করুন"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

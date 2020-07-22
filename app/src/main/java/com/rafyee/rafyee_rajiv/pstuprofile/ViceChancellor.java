@@ -9,11 +9,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.rafyee.rafyee_rajiv.pstuprofile.Dean.Dean;
-import com.rafyee.rafyee_rajiv.pstuprofile.Dean.DeanDetails;
-import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowAllStudentsActivity;
-import com.rafyee.rafyee_rajiv.pstuprofile.all_user.StudentPersonalDetailsActivity;
-
 public class ViceChancellor extends AppCompatActivity {
 
     private ImageView backButton;
@@ -26,7 +21,7 @@ public class ViceChancellor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vice_chancellor);
+        setContentView(R.layout.vice_chancellor);
         getSupportActionBar().hide();
 
         backButton = findViewById(R.id.viceChancellor_backButton);

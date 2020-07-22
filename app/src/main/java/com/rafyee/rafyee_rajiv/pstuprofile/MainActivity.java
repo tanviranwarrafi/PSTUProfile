@@ -12,11 +12,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.rafyee.rafyee_rajiv.pstuprofile.Dean.Dean;
-import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowAllStudentsActivity;
-import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowAllTeachersActivity;
-import com.rafyee.rafyee_rajiv.pstuprofile.all_user.ShowCourseFacultyActivity;
-import com.rafyee.rafyee_rajiv.pstuprofile.student_profile.StudentLoginActivity;
-import com.rafyee.rafyee_rajiv.pstuprofile.teacher_profile.TeacherLoginActivity;
+import com.rafyee.rafyee_rajiv.pstuprofile.AllStudents.AllStudents;
+import com.rafyee.rafyee_rajiv.pstuprofile.AllTeachers.AllTeachers;
+import com.rafyee.rafyee_rajiv.pstuprofile.Cources.CourseFaculty;
+import com.rafyee.rafyee_rajiv.pstuprofile.Developer.Developer;
+import com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentLogin;
+import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLogin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout developer;
     private LinearLayout dean;
     private LinearLayout website;
+
+    private String pstu_website_link, websitepage_actionbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         studentLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent studentLoginIntent = new Intent(MainActivity.this, StudentLoginActivity.class);
+                Intent studentLoginIntent = new Intent(MainActivity.this, StudentLogin.class);
                 startActivity(studentLoginIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -91,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         showAllStudents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent allStudentsIntent = new Intent(MainActivity.this, ShowAllStudentsActivity.class);
+                Intent allStudentsIntent = new Intent(MainActivity.this, AllStudents.class);
                 startActivity(allStudentsIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -101,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         teacherLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent teacherLoginIntent = new Intent(MainActivity.this, TeacherLoginActivity.class);
+                Intent teacherLoginIntent = new Intent(MainActivity.this, TeacherLogin.class);
                 startActivity(teacherLoginIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -111,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         showAllTeachers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent allTeachersIntent = new Intent(MainActivity.this, ShowAllTeachersActivity.class);
+                Intent allTeachersIntent = new Intent(MainActivity.this, AllTeachers.class);
                 startActivity(allTeachersIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -121,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         cources.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent courcesIntent = new Intent(MainActivity.this, ShowCourseFacultyActivity.class);
+                Intent courcesIntent = new Intent(MainActivity.this, CourseFaculty.class);
                 startActivity(courcesIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
@@ -138,10 +141,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        pstu_website_link = getResources().getString(R.string.pstu_website_link);
+        websitepage_actionbar = getResources().getString(R.string.mainActivity_pstu_website_title);
         website.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent websiteIntent = new Intent(MainActivity.this, Website.class);
+                websiteIntent.putExtra("link", pstu_website_link);
+                websiteIntent.putExtra("actionbar_title", websitepage_actionbar);
                 startActivity(websiteIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);

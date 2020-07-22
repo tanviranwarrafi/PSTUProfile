@@ -1,4 +1,4 @@
-package com.rafyee.rafyee_rajiv.pstuprofile;
+package com.rafyee.rafyee_rajiv.pstuprofile.Developer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,37 +14,40 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class Website extends AppCompatActivity {
+import com.rafyee.rafyee_rajiv.pstuprofile.R;
+
+public class DeveloperWebview extends AppCompatActivity {
 
     private ImageView backButton;
     private WebView webView;
     private ProgressBar websiteProgressBar;
-    private TextView actionbarTitle;
+    TextView actionbar;
 
     private String actionbar_title, link;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.website);
+        setContentView(R.layout.developer_webview);
         getSupportActionBar().hide();
 
         Intent intent = getIntent();
         actionbar_title = intent.getExtras().getString("actionbar_title");
         link = intent.getExtras().getString("link");
 
-        backButton = findViewById(R.id.website_backButton);
-        actionbarTitle = findViewById(R.id.website_actionbar_title);
-        webView = findViewById(R.id.webview);
-        websiteProgressBar = findViewById(R.id.website_progressBar);
+        backButton = findViewById(R.id.developerWebview_backButton);
+        actionbar = findViewById(R.id.developerWebview_actionbarTitle);
+        webView = findViewById(R.id.developerWebview_webview);
+        websiteProgressBar = findViewById(R.id.developerWebview_progressBar);
 
-        actionbarTitle.setText(actionbar_title);
+        actionbar.setText(actionbar_title);
 
         websiteProgressBar.setProgress(100);
         webView.loadUrl(link);
         webView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+
         webView.setWebChromeClient(new WebChromeClient(){
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
@@ -65,23 +68,5 @@ public class Website extends AppCompatActivity {
                 websiteProgressBar.setVisibility(View.GONE);
             }
         });
-
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent backIntent = new Intent(Website.this, MainActivity.class);
-                startActivity(backIntent);
-                finish();
-                overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
-            }
-        });
-    }
-
-    public void onBackPressed() {
-        Intent intent = new Intent(Website.this, MainActivity.class);
-        startActivity(intent);
-        finish();
-        overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
-        super.onBackPressed();
     }
 }
