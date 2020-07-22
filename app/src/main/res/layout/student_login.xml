@@ -30,7 +30,7 @@
         android:drawablePadding="10dp"
         android:elevation="8dp"
         android:fontFamily="@font/bensen_handwriting"
-        android:hint="ক্যাম্পাস আইডি"
+        android:hint="@string/studentLogin_campusId"
         android:inputType="number"
         android:paddingLeft="16dp"
         android:textColorHint="#9E9E9E"
@@ -50,7 +50,7 @@
         android:drawablePadding="10dp"
         android:elevation="8dp"
         android:fontFamily="@font/bensen_handwriting"
-        android:hint="গোপন পাসওয়ার্ড"
+        android:hint="@string/studentLogin_password"
         android:inputType="textPassword"
         android:paddingLeft="16dp"
         android:textColorHint="#9E9E9E"
@@ -68,7 +68,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/bensen_handwriting"
-        android:text="আপনি কি পাসওয়ার্ড ভুলে গেছেন?"
+        android:text="@string/studentLogin_forgotPassword"
         android:textColor="@color/colorText"
         android:textSize="32px"
         android:textStyle="bold"
@@ -105,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bensen_handwriting"
-        android:text="সাইন ইন"
+        android:text="@string/studentLogin_signIn"
         android:textColor="@color/colorText"
         android:textSize="48px"
         app:layout_constraintBottom_toBottomOf="@+id/studentLogin_loginBtn"
@@ -125,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bensen_handwriting"
-            android:text="আপনার কোন অ্যাকাউন্ট নেই? "
+            android:text="@string/studentLogin_dontHaveAnyAccount"
             android:textColor="@color/colorText" />
 
         <TextView
@@ -133,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bensen_handwriting"
-            android:text="সাইন আপ করুন"
+            android:text="@string/studentLogin_signInPlease"
             android:textColor="@color/black"
             android:textStyle="bold" />
     </LinearLayout>

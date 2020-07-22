@@ -47,7 +47,7 @@
         android:paddingTop="4dp"
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
-        android:text="প্রোফাইল"
+        android:text="@string/studentLoggedIn_profile"
         android:fontFamily="@font/bensen_handwriting"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ছাত্র-ছাত্রীর নাম"
+                android:text="@string/studentLoggedIn_studentName"
                 android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ক্যাম্পাস আইডি নম্বর"
+                android:text="@string/studentLoggedIn_campusId"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="রেজিস্ট্রেশন নম্বর"
+                android:text="@string/studentLoggedIn_registrationNo"
                 android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="পাসওয়ার্ড"
+                android:text="@string/studentLoggedIn_password"
                 android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
@@ -186,7 +186,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ফ্যাকাল্টি"
+                android:text="@string/studentLoggedIn_faculty"
                 android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
@@ -211,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="বযাচ"
+                android:text="@string/studentLoggedIn_batch"
                 android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
@@ -236,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="মোবাইল নম্বর"
+                android:text="@string/studentLoggedIn_contactNo"
                 android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
@@ -261,7 +261,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ই-মেইল এডড্রেস"
+                android:text="@string/studentLoggedIn_email"
                 android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
@@ -301,7 +301,7 @@
             android:fontFamily="@font/bensen_handwriting"
             android:gravity="center"
             android:paddingRight="32dp"
-            android:text="আপডেট"
+            android:text="@string/studentLoggedIn_update"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"

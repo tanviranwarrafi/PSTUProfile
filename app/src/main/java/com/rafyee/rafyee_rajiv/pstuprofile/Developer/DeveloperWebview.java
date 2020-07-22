@@ -40,7 +40,7 @@ public class DeveloperWebview extends AppCompatActivity {
         webView = findViewById(R.id.developerWebview_webview);
         websiteProgressBar = findViewById(R.id.developerWebview_progressBar);
 
-        actionbar.setText(actionbar_title);
+        /*actionbar.setText(actionbar_title);*/
 
         websiteProgressBar.setProgress(100);
         webView.loadUrl(link);

@@ -47,7 +47,7 @@
         android:paddingTop="4dp"
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
-        android:text="প্রোফাইল"
+        android:text="@string/teacherLoggedIn_profile"
         android:fontFamily="@font/bensen_handwriting"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="শিক্ষকের নাম"
+                android:text="@string/teacherLoggedIn_teacherName"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ডেজিগনেশন"
+                android:text="@string/teacherLoggedIn_designamtion"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ফ্যাকাল্টি"
+                android:text="@string/teacherLoggedIn_faculty"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ডিপার্টমেন্ট"
+                android:text="@string/teacherLoggedIn_department"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -184,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="পাসওয়ার্ড"
+                android:text="@string/teacherLoggedIn_password"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -209,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="ই-মেইল এডড্রেস"
+                android:text="@string/teacherLoggedIn_email"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -234,7 +234,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="20dp"
-                android:text="মোবাইল নম্বর"
+                android:text="@string/teacherLoggedIn_contactNo"
                 android:textColor="@color/colorText"
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold" />
@@ -274,7 +274,7 @@
             android:fontFamily="@font/bensen_handwriting"
             android:gravity="center"
             android:paddingRight="32dp"
-            android:text="আপডেট"
+            android:text="@string/teacherLoggedIn_update"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"

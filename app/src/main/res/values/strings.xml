@@ -145,12 +145,135 @@
     <string name="dialogDetails_courseCredit">3 Credit Hour</string>
     <string name="dialogDetails_courseCode">Physics-I</string>
 
+    <!-- Splash Screen-->
+    <string name="splashScreen_pstu">পবিপ্রবি</string>
 
+    <!-- Student Details-->
+    <string name="studentDetails_studentProfile">শিক্ষার্থী প্রোফাইল</string>
+    <string name="studentDetails_studentName">ছাত্র-ছাত্রীর নাম</string>
+    <string name="studentDetails_campusId">ক্যাম্পাস আইডি নম্বর</string>
+    <string name="studentDetails_registrationNo">রেজিস্ট্রেশন নম্বর</string>
+    <string name="studentDetails_faculty">ফ্যাকাল্টি</string>
+    <string name="studentDetails_batch">বযাচ</string>
+    <string name="studentDetails_contactNo">মোবাইল নম্বর</string>
+    <string name="studentDetails_emailAddress">ই-মেইল এডড্রেস</string>
+    <string name="studentDetails_phoneCall">ফোন কল</string>
+    <string name="studentDetails_sms">এসএমএস</string>
+    <string name="studentDetails_email">ই-মেইল</string>
 
+    <!-- Student List Item Layout -->
+    <string name="studentListItemLayout_studentName">স্টুডেন্টের নাম</string>
+    <string name="studentListItemLayout_batch">ব্যাচ</string>
 
+    <!-- Student LoggedIn -->
+    <string name="studentLoggedIn_profile">প্রোফাইল</string>
+    <string name="studentLoggedIn_studentName">ছাত্র-ছাত্রীর নাম</string>
+    <string name="studentLoggedIn_campusId">ক্যাম্পাস আইডি নম্বর</string>
+    <string name="studentLoggedIn_registrationNo">রেজিস্ট্রেশন নম্বর</string>
+    <string name="studentLoggedIn_password">পাসওয়ার্ড</string>
+    <string name="studentLoggedIn_faculty">ফ্যাকাল্টি</string>
+    <string name="studentLoggedIn_batch">ব্যাচ</string>
+    <string name="studentLoggedIn_contactNo">মোবাইল নম্বর</string>
+    <string name="studentLoggedIn_email">ই-মেইল এডড্রেস</string>
+    <string name="studentLoggedIn_update">আপডেট</string>
 
+    <!-- Student Login -->
+    <string name="studentLogin_campusId">ক্যাম্পাস আইডি</string>
+    <string name="studentLogin_password">গোপন পাসওয়ার্ড</string>
+    <string name="studentLogin_forgotPassword">আপনি কি পাসওয়ার্ড ভুলে গেছেন?</string>
+    <string name="studentLogin_signIn">সাইন ইন</string>
+    <string name="studentLogin_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই? </string>
+    <string name="studentLogin_signInPlease">সাইন আপ করুন</string>
 
+    <!-- Student SignUp -->
+    <string name="studentSignUp_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই?</string>
+    <string name="studentSignUp_studentName">ছাত্র-ছাত্রীর নাম</string>
+    <string name="studentSignUp_campusId">ক্যাম্পাস আইডি নম্বর</string>
+    <string name="studentSignUp_registrationNo">রেজিস্ট্রেশন নম্বর</string>
+    <string name="studentSignUp_password">পাসওয়ার্ড</string>
+    <string name="studentSignUp_selectFaculty">ফ্যাকাল্টি সিলেক্ট করুনঃ </string>
+    <string name="studentSignUp_selectBatch">ব্যাচ সিলেক্ট করুনঃ</string>
+    <string name="studentSignUp_contactNo">মোবাইল নম্বর</string>
+    <string name="studentSignUp_email">ই-মেইল এডড্রেস</string>
+    <string name="studentSignUp_signUp">সাইন আপ করুন</string>
+    <string name="studentSignUp_alreadyHaveAnyAccount">আপনার কি একাউন্ট আছে? </string>
+    <string name="studentSignUp_signInPlease">সাইন ইন করুন</string>
 
+    <!-- Student Update -->
+    <string name="studentUpdate_studentUpdate">শিক্ষার্থী আপডেট</string>
+    <string name="studentUpdate_studentName">ছাত্র-ছাত্রীর নাম</string>
+    <string name="studentUpdate_newPassword">নতুন পাসওয়ার্ড</string>
+    <string name="studentUpdate_newContactNo">নতুন মোবাইল নম্বর</string>
+    <string name="studentUpdate_newEmail">নতুন ই-মেইল এডড্রেস</string>
+    <string name="studentUpdate_update">আপডেট করুন</string>
+
+    <!-- Teacher Details -->
+    <string name="teacherDetails_teacherProfile">শিক্ষক প্রোফাইল</string>
+    <string name="teacherDetails_teacherName">শিক্ষকের নাম</string>
+    <string name="teacherDetails_designamtion">ডেজিগনেশন</string>
+    <string name="teacherDetails_faculty">ফ্যাকাল্টি</string>
+    <string name="teacherDetails_department">ডিপার্টমেন্ট</string>
+    <string name="teacherDetails_email">ই-মেইল এডড্রেস</string>
+    <string name="teacherDetails_contactNo">মোবাইল নম্বর</string>
+    <string name="teacherDetails_phoneCall">ফোন কল</string>
+    <string name="teacherDetails_sms">এসএমএস</string>
+    <string name="teacherDetails_sendEmail">ই-মেইল</string>
+
+    <!-- Teacher List Item Layout -->
+    <string name="teacherListItemLayout_teacherName">শিক্ষকের নাম</string>
+
+    <!-- Teacher LoggedIn -->
+    <string name="teacherLoggedIn_profile">প্রোফাইল</string>
+    <string name="teacherLoggedIn_teacherName">শিক্ষকের নাম</string>
+    <string name="teacherLoggedIn_designamtion">ডেজিগনেশন</string>
+    <string name="teacherLoggedIn_faculty">ফ্যাকাল্টি</string>
+    <string name="teacherLoggedIn_department">ডিপার্টমেন্ট</string>
+    <string name="teacherLoggedIn_password">পাসওয়ার্ড</string>
+    <string name="teacherLoggedIn_email">ই-মেইল এডড্রেস</string>
+    <string name="teacherLoggedIn_contactNo">মোবাইল নম্বর</string>
+    <string name="teacherLoggedIn_update">আপডেট</string>
+
+    <!-- Teacher Login -->
+    <string name="teacherLogin_teacherEmail">ই-মেইল এডড্রেস</string>
+    <string name="teacherLogin_password">গোপন পাসওয়ার্ড</string>
+    <string name="teacherLogin_forgotPassword">আপনি কি পাসওয়ার্ড ভুলে গেছেন?</string>
+    <string name="teacherLogin_signIn">সাইন ইন</string>
+    <string name="teacherLogin_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই? </string>
+    <string name="teacherLogin_signInPlease"> সাইন আপ করুন</string>
+
+    <!-- Teacher SignUp -->
+    <string name="teacherSignUp_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই?</string>
+    <string name="teacherSignUp_teacherName">শিক্ষকের নাম</string>
+    <string name="teacherSignUp_selectDesignation">ডেজিগনেশন শিলেক্ট করুনঃ </string>
+    <string name="teacherSignUp_selectFaculty">ফ্যাকাল্টি সিলেক্ট করুনঃ </string>
+    <string name="teacherSignUp_selectDepartment">ডিপার্টমেন্ট সিলেক্ট করুনঃ</string>
+    <string name="teacherSignUp_password">পাসওয়ার্ড</string>
+    <string name="teacherSignUp_email">ই-মেইল এডড্রেস</string>
+    <string name="teacherSignUp_contactNo">মোবাইল নম্বর</string>
+    <string name="teacherSignUp_signUp">সাইন আপ করুন</string>
+    <string name="teacherSignUp_alreadyHaveAnyAccount">আপনার কি একাউন্ট আছে? </string>
+    <string name="teacherSignUp_signInPlease">সাইন ইন করুন</string>
+
+    <!-- Teacher Update -->
+    <string name="teacherUpdate_teacherUpdate">শিক্ষক আপডেট</string>
+    <string name="teacherUpdate_teacherName">শিক্ষকের নাম</string>
+    <string name="teacherUpdate_selectDesignation">ডেজিকগনেশন সিলেক্ট করুনঃ</string>
+    <string name="teacherUpdate_newPassword">নতুন পাসওয়ার্ড</string>
+    <string name="tacherUpdate_newContactNo">নতুন মোবাইল নম্বর</string>
+    <string name="teacherUpdate_update">আপডেট করুন</string>
+
+    <!-- Vice Chancellor -->
+    <string name="viceChancellor_viceChancellor">ভাইস-চ্যান্সেলর</string>
+    <string name="viceChancellor_name">প্রফেসর ড. মোঃ হারুন-অর-রশিদ</string>
+    <string name="viceChancellor_message">ভাইস-চ্যান্সেলরের ম্যাসেজ</string>
+    <string name="viceChancellor_messageDetails">পটুয়াখালী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ে (পিএসটিইউ) আপনাকে আন্তরিকভাবে স্বাগতম জানাই। এটি বাংলাদেশের দ্রুত বর্ধমান নতুন পাবলিক বিশ্ববিদ্যালয়গুলির মধ্যে একটি। এই বিশ্ববিদ্যালয়ের উদ্বোধন করা হয়েছিল ২০০৮ সালের ৮ জুলাই তৎকালীন মাননীয় প্রধানমন্ত্রী, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার, মহামান্য শেখ হাসিনা এবং ২৬শে ফেব্রুয়ারী ২০০২ এ তার একাডেমিক কার্যক্রম শুরু করেছিলেন।</string>
+    <string name="viceChancellor_forAppointment">এপয়েনমেন্টের জন্য</string>
+    <string name="viceChancellor_call">কল</string>
+    <string name="viceChancellor_sms">এসএমএস</string>
+    <string name="viceChancellor_email">ই-মেইল</string>
+
+    <!-- Website -->
+    <string name="website_pstuWebsite">পবিপ্রবি ওয়েবসাইট</string>
 
 
 

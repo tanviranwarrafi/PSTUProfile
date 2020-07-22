@@ -15,7 +15,7 @@
         android:paddingLeft="16dp"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:text="শিক্ষকের নাম"
+        android:text="@string/teacherListItemLayout_teacherName"
         android:fontFamily="@font/kalpurush"
         android:textColor="@color/white"
         android:textSize="18sp"
