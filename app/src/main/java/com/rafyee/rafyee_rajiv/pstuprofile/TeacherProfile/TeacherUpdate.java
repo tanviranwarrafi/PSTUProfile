@@ -49,13 +49,13 @@ public class TeacherUpdate extends AppCompatActivity {
         gotPassword = intent.getExtras().getString("teacher_password");
         gotContact = intent.getExtras().getString("teacher_contact");
 
-        backButton = findViewById(R.id.teacherLoggedInPersonalUpdate_backButton);
-        teacherNameInTop = findViewById(R.id.teacherLoggedInPersonalUpdate_teacherNameInTop);
-        teacherName = findViewById(R.id.teacherLoggedInPersonalUpdate_teacherName);
-        teacherPassword = findViewById(R.id.teacherLoggedInPersonalUpdate_teacherPassword);
-        teacherContact = findViewById(R.id.teacherLoggedInPersonalUpdate_teacherContactNo);
-        teacherPost = findViewById(R.id.teacherLoggedInPersonalUpdate_teacherPost);
-        teacherUpdateBtn = findViewById(R.id.teacherLoggedInPersonalUpdate_teacherUpdateBtn);
+        backButton = findViewById(R.id.teacherUpdate_backButton);
+        teacherNameInTop = findViewById(R.id.teacherUpdate_nameTop);
+        teacherName = findViewById(R.id.teacherUpdate_newName);
+        teacherPassword = findViewById(R.id.teacherUpdate_newPassword);
+        teacherContact = findViewById(R.id.teacherUpdate_newContact);
+        teacherPost = findViewById(R.id.teacherUpdate_newPost);
+        teacherUpdateBtn = findViewById(R.id.teacherUpdate_updateBtn);
 
         teacherNameInTop.setText(gotName);
         teacherName.setText(gotName);
@@ -66,6 +66,7 @@ public class TeacherUpdate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(TeacherUpdate.this, TeacherLoggedIn.class);
+                backIntent.putExtra("t_email", gotTeacherEmail);
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
                 startActivity(backIntent);
                 finish();
@@ -97,11 +98,11 @@ public class TeacherUpdate extends AppCompatActivity {
                 contact = teacherContact.getText().toString();
 
                 RequestQueue requestQueue = Volley.newRequestQueue(TeacherUpdate.this);
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Login_Personal_Update,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Update,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Toast.makeText(TeacherUpdate.this, response, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TeacherUpdate.this,  "আপডেট সফল হয়েছে", Toast.LENGTH_SHORT).show();
                             }
                         }, new Response.ErrorListener() {
 
@@ -122,18 +123,21 @@ public class TeacherUpdate extends AppCompatActivity {
                     }
                 };
                 requestQueue.add(stringRequest);
-                Intent in = new Intent(TeacherUpdate.this, TeacherLogin.class);
+                Intent in = new Intent(TeacherUpdate.this, TeacherLoggedIn.class);
+                in.putExtra("t_email", gotTeacherEmail);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
                 startActivity(in);
             }
         });
     }
 
-    /* back pressed kore logged in e gele crash kore*/
-    /*public void onBackPressed() {
-        Intent intent = new Intent(TeacherLoggedInPersonalUpdateActivity.this, TeacherLoggedInActivity.class);
+    public void onBackPressed() {
+        Intent intent = new Intent(TeacherUpdate.this, TeacherLoggedIn.class);
+        intent.putExtra("t_email", gotTeacherEmail);
         startActivity(intent);
         finish();
         overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
         super.onBackPressed();
-    }*/
+    }
+
 }

@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/showAllTeachers_backButton"
+            android:id="@+id/allTeachers_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -59,14 +59,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/showAllTeachers_backButton"
+            app:layout_constraintStart_toEndOf="@+id/allTeachers_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Spinner
-        android:id="@+id/showAllTeachers_teacherFaculty"
+        android:id="@+id/allTeachers_facultySpinner"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/topView" />
 
     <Spinner
-        android:id="@+id/showAllTeachers_teacherDepartment"
+        android:id="@+id/allTeachers_departmentSpinner"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -100,10 +100,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showAllTeachers_teacherFaculty" />
+        app:layout_constraintTop_toBottomOf="@+id/allTeachers_facultySpinner" />
 
     <Button
-        android:id="@+id/showAllTeachers_viewTeacherBtn"
+        android:id="@+id/allTeachers_showAllTeacherBtn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
@@ -119,10 +119,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showAllTeachers_teacherDepartment" />
+        app:layout_constraintTop_toBottomOf="@+id/allTeachers_departmentSpinner" />
 
     <ListView
-        android:id="@+id/showAllTeachers_teacherListview"
+        android:id="@+id/allTeachers_listView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -134,17 +134,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showAllTeachers_viewTeacherBtn"></ListView>
+        app:layout_constraintTop_toBottomOf="@+id/allTeachers_showAllTeacherBtn"></ListView>
 
     <ProgressBar
-        android:id="@+id/showAllTeachers_progressBar"
+        android:id="@+id/allTeachers_progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/showAllTeachers_teacherListview"
-        app:layout_constraintStart_toStartOf="@+id/showAllTeachers_teacherListview"
-        app:layout_constraintTop_toTopOf="@+id/showAllTeachers_teacherListview" />
+        app:layout_constraintEnd_toEndOf="@+id/allTeachers_listView"
+        app:layout_constraintStart_toStartOf="@+id/allTeachers_listView"
+        app:layout_constraintTop_toTopOf="@+id/allTeachers_listView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

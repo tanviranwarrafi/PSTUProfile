@@ -56,12 +56,12 @@ public class AllTeachers extends AppCompatActivity {
         setContentView(R.layout.all_teachers);
         getSupportActionBar().hide();
 
-        backButton = findViewById(R.id.showAllTeachers_backButton);
-        teacherDepartment = findViewById(R.id.showAllTeachers_teacherDepartment);
-        teacherFaculty = findViewById(R.id.showAllTeachers_teacherFaculty);
-        showTeacherBtn = findViewById(R.id.showAllTeachers_viewTeacherBtn);
-        progressBar = findViewById(R.id.showAllTeachers_progressBar);
-        listView = findViewById(R.id.showAllTeachers_teacherListview);
+        backButton = findViewById(R.id.allTeachers_backButton);
+        teacherDepartment = findViewById(R.id.allTeachers_departmentSpinner);
+        teacherFaculty = findViewById(R.id.allTeachers_facultySpinner);
+        showTeacherBtn = findViewById(R.id.allTeachers_showAllTeacherBtn);
+        progressBar = findViewById(R.id.allTeachers_progressBar);
+        listView = findViewById(R.id.allTeachers_listView);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +170,7 @@ public class AllTeachers extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Show_Teacher,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.All_Teachers,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {

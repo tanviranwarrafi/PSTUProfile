@@ -58,10 +58,10 @@ public class CourseDetails extends AppCompatActivity {
 
         backButton = findViewById(R.id.coureseDetails_backButton);
         facultyName = findViewById(R.id.courseDetails_facultyName);
-        semesterSpinner = findViewById(R.id.coureseDetails_semester);
+        semesterSpinner = findViewById(R.id.coureseDetails_semesterSpinner);
         progressBar = findViewById(R.id.courseDetails_progressBar);
         showCourse = findViewById(R.id.coureseDetails_showAllCourseBtn);
-        listview = findViewById(R.id.coureseDetails_courseListView);
+        listview = findViewById(R.id.coureseDetails_ListView);
 
         Intent intent = getIntent();
         final String faculty = intent.getExtras().getString("faculty");
@@ -98,7 +98,7 @@ public class CourseDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.User_Show_Course,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.All_Courses,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {

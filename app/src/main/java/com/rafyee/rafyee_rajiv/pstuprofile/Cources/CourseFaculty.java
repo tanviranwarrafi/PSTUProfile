@@ -23,16 +23,16 @@ public class CourseFaculty extends AppCompatActivity {
         setContentView(R.layout.course_faculty);
         getSupportActionBar().hide();
 
-        backButton = findViewById(R.id.showCourseFaculty_backButton);
-        agriculture = findViewById(R.id.showCourseFaculty_agriculture);
-        computerScience = findViewById(R.id.showCourseFaculty_cse);
-        businessAdministration = findViewById(R.id.showCourseFaculty_bba);
-        nutrationAndFood = findViewById(R.id.showCourseFaculty_nfs);
-        desastarManagement = findViewById(R.id.showCourseFaculty_disasterManagement);
-        landManagement = findViewById(R.id.showCourseFaculty_landManagement);
-        animalHusbandary = findViewById(R.id.showCourseFaculty_animalHusbendary);
-        vetenaryMedecine = findViewById(R.id.showCourseFaculty_dvm);
-        fisharies = findViewById(R.id.showCourseFaculty_fisharies);
+        backButton = findViewById(R.id.courseFaculty_backButton);
+        agriculture = findViewById(R.id.courseFaculty_agriculture);
+        computerScience = findViewById(R.id.courseFaculty_cse);
+        businessAdministration = findViewById(R.id.courseFaculty_bba);
+        nutrationAndFood = findViewById(R.id.courseFaculty_nfs);
+        desastarManagement = findViewById(R.id.courseFaculty_esdm);
+        landManagement = findViewById(R.id.courseFaculty_nfslandManagement);
+        animalHusbandary = findViewById(R.id.courseFaculty_animalHusbandary);
+        vetenaryMedecine = findViewById(R.id.courseFaculty_dvm);
+        fisharies = findViewById(R.id.courseFaculty_fisharies);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

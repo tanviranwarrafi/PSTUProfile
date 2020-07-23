@@ -53,7 +53,7 @@ public class TeacherSignUp extends AppCompatActivity {
         teacherDepartment = findViewById(R.id.teacherSignUp_teacherDepartment);
         teacherFaculty = findViewById(R.id.teacherSignUp_teacherFaculty);
         progressBar = findViewById(R.id.teacherSignUp_progressbar);
-        teacherSignUpBtn = findViewById(R.id.SignUp_teacher);
+        teacherSignUpBtn = findViewById(R.id.teacherSignUp_signUp);
         gotoSignIn = findViewById(R.id.teacherSignUp_signIn);
 
         gotoSignIn.setOnClickListener(new View.OnClickListener() {

@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/studentLoggedInPersonalUpdate_studentBackButton"
+            android:id="@+id/studentUpdate_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -59,7 +59,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/bensen_handwriting"
             android:text="@string/studentUpdate_studentUpdate"
             android:textAlignment="textStart"
@@ -69,14 +69,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/studentLoggedInPersonalUpdate_studentBackButton"
+            app:layout_constraintStart_toEndOf="@+id/studentUpdate_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/studentLoggedInPersonalUpdate_studentName"
+        android:id="@+id/studentUpdate_newName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -95,11 +95,12 @@
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <EditText
-        android:id="@+id/studentLoggedInPersonalUpdate_studentPassword"
+        android:id="@+id/studentUpdate_newPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -120,10 +121,10 @@
         android:textColorHint="@color/colorText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentName" />
+        app:layout_constraintTop_toBottomOf="@+id/studentUpdate_newName" />
 
     <EditText
-        android:id="@+id/studentLoggedInPersonalUpdate_studentContactNo"
+        android:id="@+id/studentUpdate_newContactNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -144,10 +145,10 @@
         android:textColorHint="@color/colorText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/studentUpdate_newPassword" />
 
     <EditText
-        android:id="@+id/studentLoggedInPersonalUpdate_studentEmailAddress"
+        android:id="@+id/studentUpdatestudentLoggedInPersonalUpdate_newEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -168,10 +169,10 @@
         android:textColorHint="@color/colorText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentContactNo" />
+        app:layout_constraintTop_toBottomOf="@+id/studentUpdate_newContactNo" />
 
     <LinearLayout
-        android:id="@+id/studentLoggedInPersonalUpdate_studentUpdateBtn"
+        android:id="@+id/studentUpdate_studentUpdateBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -185,7 +186,7 @@
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentLoggedInPersonalUpdate_studentEmailAddress">
+        app:layout_constraintTop_toBottomOf="@+id/studentUpdatestudentLoggedInPersonalUpdate_newEmail">
 
         <ImageView
             android:layout_width="20dp"

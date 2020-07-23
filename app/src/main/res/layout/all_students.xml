@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/showAllStudents_backButton"
+            android:id="@+id/allStudents_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -59,14 +59,14 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/showAllStudents_backButton"
+            app:layout_constraintStart_toEndOf="@+id/allStudents_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Spinner
-        android:id="@+id/showAllStudents_studentFaculty"
+        android:id="@+id/allStudents_facultySpinner"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/topView" />
 
     <Spinner
-        android:id="@+id/showAllStudents_studentBatch"
+        android:id="@+id/allStudents_batchSpinner"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -100,10 +100,10 @@
         android:entries="@array/batchs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showAllStudents_studentFaculty" />
+        app:layout_constraintTop_toBottomOf="@+id/allStudents_facultySpinner" />
 
     <Button
-        android:id="@+id/showAllStudents_showStudentsBtn"
+        android:id="@+id/allStudents_showAllStudentsBtn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
@@ -119,10 +119,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showAllStudents_studentBatch" />
+        app:layout_constraintTop_toBottomOf="@+id/allStudents_batchSpinner" />
 
     <ListView
-        android:id="@+id/showAllStudents_studentListview"
+        android:id="@+id/allStudents_listview"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -134,19 +134,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showAllStudents_showStudentsBtn">
+        app:layout_constraintTop_toBottomOf="@+id/allStudents_showAllStudentsBtn">
 
     </ListView>
 
     <ProgressBar
-        android:id="@+id/showAllStudents_progressBar"
+        android:id="@+id/allStudents_progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/showAllStudents_studentListview"
-        app:layout_constraintEnd_toEndOf="@+id/showAllStudents_studentListview"
-        app:layout_constraintStart_toStartOf="@+id/showAllStudents_studentListview"
-        app:layout_constraintTop_toTopOf="@+id/showAllStudents_studentListview" />
+        app:layout_constraintBottom_toBottomOf="@+id/allStudents_listview"
+        app:layout_constraintEnd_toEndOf="@+id/allStudents_listview"
+        app:layout_constraintStart_toStartOf="@+id/allStudents_listview"
+        app:layout_constraintTop_toTopOf="@+id/allStudents_listview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

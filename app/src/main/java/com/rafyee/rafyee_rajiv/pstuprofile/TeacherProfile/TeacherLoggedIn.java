@@ -38,6 +38,12 @@ public class TeacherLoggedIn extends AppCompatActivity {
     public static final String JSON_ARRAY = "result";
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        loadteacherData();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.teacher_logged_in);
@@ -55,7 +61,12 @@ public class TeacherLoggedIn extends AppCompatActivity {
         Intent intent = getIntent();
         gotTeacherEmail = intent.getExtras().getString("t_email");
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Login_Personal_Details,
+        loadteacherData();
+
+    }
+
+    private void loadteacherData() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Details,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -83,7 +94,7 @@ public class TeacherLoggedIn extends AppCompatActivity {
                                     department = teacherUnit.getT_dept();
                                     password = teacherUnit.getT_pass();
                                     email = teacherUnit.getT_email();
-                                    contact = teacherUnit.getT_email();
+                                    contact = teacherUnit.getT_contact();
 
                                     teacherName.setText(name);
                                     teacherPost.setText(post);
@@ -102,7 +113,7 @@ public class TeacherLoggedIn extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(TeacherLoggedIn.this, "Login failed", Toast.LENGTH_SHORT).show();
+
                     }
                 }
         ) {
@@ -122,9 +133,9 @@ public class TeacherLoggedIn extends AppCompatActivity {
                 Intent i = new Intent(TeacherLoggedIn.this, TeacherUpdate.class);
                 i.putExtra("teacher_name", teacherName.getText().toString());
                 i.putExtra("teacher_post", teacherPost.getText().toString());
-                i.putExtra("teacher_contact", teacherPassword.getText().toString());
+                i.putExtra("teacher_password", teacherPassword.getText().toString());
                 i.putExtra("teacher_email", teacherEmail.getText().toString());
-                i.putExtra("teacher_password", teacherContact.getText().toString());
+                i.putExtra("teacher_contact", teacherContact.getText().toString());
                 startActivity(i);
             }
         });

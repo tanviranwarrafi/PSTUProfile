@@ -55,12 +55,12 @@ public class AllStudents extends AppCompatActivity {
         setContentView(R.layout.all_students);
         getSupportActionBar().hide();
 
-        backButton = findViewById(R.id.showAllStudents_backButton);
-        studentFaculty = findViewById(R.id.showAllStudents_studentFaculty);
-        studentBatch = findViewById(R.id.showAllStudents_studentBatch);
-        progressBar = findViewById(R.id.showAllStudents_progressBar);
-        showStudents = findViewById(R.id.showAllStudents_showStudentsBtn);
-        listView = findViewById(R.id.showAllStudents_studentListview);
+        backButton = findViewById(R.id.allStudents_backButton);
+        studentFaculty = findViewById(R.id.allStudents_facultySpinner);
+        studentBatch = findViewById(R.id.allStudents_batchSpinner);
+        progressBar = findViewById(R.id.allStudents_progressBar);
+        showStudents = findViewById(R.id.allStudents_showAllStudentsBtn);
+        listView = findViewById(R.id.allStudents_listview);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,7 +143,7 @@ public class AllStudents extends AppCompatActivity {
 
     private void showAllStudent() {
         progressBar.setVisibility(View.VISIBLE);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Show_Students,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.All_Students,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

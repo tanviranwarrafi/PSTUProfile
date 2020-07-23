@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/font/roboto_mediumitalic.ttf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/font/roboto_regular.ttf" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_course.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_image.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/xml" charset="windows-1251" />
   </component>
 </project>

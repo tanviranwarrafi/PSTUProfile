@@ -149,7 +149,7 @@
                 android:textStyle="bold" />
 
             <Spinner
-                android:id="@+id/studentSignUp_studentFaculty"
+                android:id="@+id/studentSignUp_FacultySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -171,7 +171,7 @@
                 android:textStyle="bold" />
 
             <Spinner
-                android:id="@+id/studentSignUp_studentBatch"
+                android:id="@+id/studentSignUp_BatchSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -272,7 +272,6 @@
                     android:layout_marginBottom="16dp">
 
                     <TextView
-                        android:id="@+id/no_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bensen_handwriting"
@@ -281,6 +280,11 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/studentLogin_studentSignUp"
                         app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "/>
 
                     <TextView
                         android:id="@+id/studentSignUp_signIn"

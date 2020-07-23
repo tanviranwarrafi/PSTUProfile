@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/studentLogin_studentID" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/studentLogin_forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/studentLogin_forgotPassword" />
 
     <ProgressBar
         android:id="@+id/studentLogin_progressbar"
@@ -121,11 +121,16 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/no_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bensen_handwriting"
             android:text="@string/studentLogin_dontHaveAnyAccount"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
             android:textColor="@color/colorText" />
 
         <TextView

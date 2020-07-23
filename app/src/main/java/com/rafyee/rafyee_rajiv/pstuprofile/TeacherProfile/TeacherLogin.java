@@ -48,7 +48,7 @@ public class TeacherLogin extends AppCompatActivity {
         teacherPassword = findViewById(R.id.teacherLogin_teacherPassword);
         progressBar = findViewById(R.id.teacherLogin_progressbar);
         /*showPassword = findViewById(R.id.teacherLogin_showPassword);*/
-        teacherLoginBtn = findViewById(R.id.teacherLogin_teacherLoginBtn);
+        teacherLoginBtn = findViewById(R.id.teacherLogin_LoginBtn);
         teacherRegistration = findViewById(R.id.teacherLogin_teacherSignUp);
 
         /*showPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

@@ -19,6 +19,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
+import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLoggedIn;
+import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherUpdate;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,18 +40,18 @@ public class StudentUpdate extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Intent intent = getIntent();
-        gotStudentId = intent.getExtras().getString("id_no");
+        gotStudentId = intent.getExtras().getString("Id_no");
         gotNmae = intent.getExtras().getString("name");
         gotPassword = intent.getExtras().getString("password");
         gotContact = intent.getExtras().getString("contact");
         gotEmail = intent.getExtras().getString("email");
 
-        backButton = findViewById(R.id.studentLoggedInPersonalUpdate_studentBackButton);
-        updateStudent = findViewById(R.id.studentLoggedInPersonalUpdate_studentUpdateBtn);
-        studentName = findViewById(R.id.studentLoggedInPersonalUpdate_studentName);
-        studentPassword = findViewById(R.id.studentLoggedInPersonalUpdate_studentPassword);
-        studentContactNo = findViewById(R.id.studentLoggedInPersonalUpdate_studentContactNo);
-        studentEmail = findViewById(R.id.studentLoggedInPersonalUpdate_studentEmailAddress);
+        backButton = findViewById(R.id.studentUpdate_backButton);
+        updateStudent = findViewById(R.id.studentUpdate_studentUpdateBtn);
+        studentName = findViewById(R.id.studentUpdate_newName);
+        studentPassword = findViewById(R.id.studentUpdate_newPassword);
+        studentContactNo = findViewById(R.id.studentUpdate_newContactNo);
+        studentEmail = findViewById(R.id.studentUpdatestudentLoggedInPersonalUpdate_newEmail);
 
         studentName.setText(gotNmae);
         studentPassword.setText(gotPassword);
@@ -60,6 +62,7 @@ public class StudentUpdate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(StudentUpdate.this, StudentLoggedIn.class);
+                backIntent.putExtra("Id_no", gotStudentId);
                 startActivity(backIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
@@ -75,7 +78,7 @@ public class StudentUpdate extends AppCompatActivity {
                 email = studentEmail.getText().toString();
 
                 RequestQueue requestQueue = Volley.newRequestQueue(StudentUpdate.this);
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.student_personal_update,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Student_Update,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -101,8 +104,19 @@ public class StudentUpdate extends AppCompatActivity {
                 };
                 requestQueue.add(stringRequest);
                 Intent in = new Intent(StudentUpdate.this, StudentLoggedIn.class);
+                in.putExtra("Id_no", gotStudentId);
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
                 startActivity(in);
             }
         });
+    }
+
+    public void onBackPressed() {
+        Intent intent = new Intent(StudentUpdate.this, TeacherLoggedIn.class);
+        intent.putExtra("Id_no", gotStudentId);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+        super.onBackPressed();
     }
 }

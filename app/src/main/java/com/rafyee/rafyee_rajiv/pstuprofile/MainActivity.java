@@ -44,16 +44,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
-        imageSlider = findViewById(R.id.imageSlider);
+        imageSlider = findViewById(R.id.mainActivity_imageSlider);
         studentLogin = findViewById(R.id.mainActivity_studentLogin);
-        showAllStudents = findViewById(R.id.mainActivity_showAllStudent);
+        showAllStudents = findViewById(R.id.courseFaculty_newFaculty);
         teacherLogin = findViewById(R.id.mainActivity_teacherLogin);
         showAllTeachers = findViewById(R.id.mainActivity_showAllTeacher);
         cources = findViewById(R.id.mainActivity_showCourses);
-        viceChancellor = findViewById(R.id.vice_chancellor);
-        developer = findViewById(R.id.developer);
-        dean = findViewById(R.id.dean);
-        website = findViewById(R.id.pstu_website);
+        viceChancellor = findViewById(R.id.mainActivity_viceChancellor);
+        developer = findViewById(R.id.mainActivity_developer);
+        dean = findViewById(R.id.mainActivity_dean);
+        website = findViewById(R.id.mainActivity_pstuWebsite);
 
         List<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));

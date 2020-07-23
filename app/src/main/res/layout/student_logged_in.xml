@@ -160,9 +160,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:fontFamily="@font/kalpurush"
                 android:paddingLeft="20dp"
                 android:text="@string/studentLoggedIn_password"
-                android:fontFamily="@font/kalpurush"
                 android:textColor="@color/colorText"
                 android:textStyle="bold" />
         </LinearLayout>

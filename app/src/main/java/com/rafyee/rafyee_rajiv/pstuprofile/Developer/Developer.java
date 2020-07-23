@@ -32,7 +32,7 @@ public class Developer extends AppCompatActivity {
         facebook = findViewById(R.id.developer_facebook);
         git = findViewById(R.id.developer_git);
         linkedIn = findViewById(R.id.developer_linkedIn);
-        instagram = findViewById(R.id.developer_intagram);
+        instagram = findViewById(R.id.developer_instagram);
         skype = findViewById(R.id.developer_skype);
         pstuProfile = findViewById(R.id.developer_pstuProfile);
         familyContact = findViewById(R.id.developer_familyContact);

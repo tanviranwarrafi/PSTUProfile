@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/teacherLoggedInPersonalUpdate_backButton"
+            android:id="@+id/teacherUpdate_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -59,7 +59,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/teacherLoggedInPersonalUpdate_backButton"
+            app:layout_constraintStart_toEndOf="@+id/teacherUpdate_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <TextView
-        android:id="@+id/teacherLoggedInPersonalUpdate_teacherNameInTop"
+        android:id="@+id/teacherUpdate_nameTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <EditText
-        android:id="@+id/teacherLoggedInPersonalUpdate_teacherName"
+        android:id="@+id/teacherUpdate_newName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -124,11 +124,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/teacherLoggedInPersonalUpdate_teacherName"
-        app:layout_constraintTop_toBottomOf="@+id/teacherLoggedInPersonalUpdate_teacherName" />
+        app:layout_constraintStart_toStartOf="@+id/teacherUpdate_newName"
+        app:layout_constraintTop_toBottomOf="@+id/teacherUpdate_newName" />
 
     <Spinner
-        android:id="@+id/teacherLoggedInPersonalUpdate_teacherPost"
+        android:id="@+id/teacherUpdate_newPost"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
@@ -138,14 +138,12 @@
         android:elevation="3dp"
         android:layout_marginTop="8dp"
         android:entries="@array/posts"
-        android:paddingTop="5dp"
-        android:popupBackground="@color/colorText"
-        app:layout_constraintEnd_toEndOf="@+id/teacherLoggedInPersonalUpdate_teacherName"
+        app:layout_constraintEnd_toEndOf="@+id/teacherUpdate_newName"
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/teacherLoggedInPersonalUpdate_teacherPassword"
+        android:id="@+id/teacherUpdate_newPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -161,12 +159,12 @@
         android:padding="8dp"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorText"
-        app:layout_constraintEnd_toEndOf="@+id/teacherLoggedInPersonalUpdate_teacherPost"
-        app:layout_constraintStart_toStartOf="@+id/teacherLoggedInPersonalUpdate_teacherPost"
-        app:layout_constraintTop_toBottomOf="@+id/teacherLoggedInPersonalUpdate_teacherPost" />
+        app:layout_constraintEnd_toEndOf="@+id/teacherUpdate_newPost"
+        app:layout_constraintStart_toStartOf="@+id/teacherUpdate_newPost"
+        app:layout_constraintTop_toBottomOf="@+id/teacherUpdate_newPost" />
 
     <EditText
-        android:id="@+id/teacherLoggedInPersonalUpdate_teacherContactNo"
+        android:id="@+id/teacherUpdate_newContact"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -182,12 +180,12 @@
         android:padding="8dp"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorText"
-        app:layout_constraintEnd_toEndOf="@+id/teacherLoggedInPersonalUpdate_teacherPassword"
-        app:layout_constraintStart_toStartOf="@+id/teacherLoggedInPersonalUpdate_teacherPassword"
-        app:layout_constraintTop_toBottomOf="@+id/teacherLoggedInPersonalUpdate_teacherPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/teacherUpdate_newPassword"
+        app:layout_constraintStart_toStartOf="@+id/teacherUpdate_newPassword"
+        app:layout_constraintTop_toBottomOf="@+id/teacherUpdate_newPassword" />
 
     <LinearLayout
-        android:id="@+id/teacherLoggedInPersonalUpdate_teacherUpdateBtn"
+        android:id="@+id/teacherUpdate_updateBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -201,7 +199,7 @@
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teacherLoggedInPersonalUpdate_teacherContactNo">
+        app:layout_constraintTop_toBottomOf="@+id/teacherUpdate_newContact">
 
         <ImageView
             android:layout_width="20dp"

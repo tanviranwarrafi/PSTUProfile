@@ -20,7 +20,7 @@
             android:orientation="vertical">
 
             <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/imageSlider"
+                android:id="@+id/mainActivity_imageSlider"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="@drawable/border"
@@ -61,7 +61,7 @@
                 android:weightSum="3">
 
                 <LinearLayout
-                    android:id="@+id/vice_chancellor"
+                    android:id="@+id/mainActivity_viceChancellor"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -93,7 +93,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/dean"
+                    android:id="@+id/mainActivity_dean"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -223,7 +223,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/mainActivity_showAllStudent"
+                    android:id="@+id/courseFaculty_newFaculty"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -293,7 +293,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/pstu_website"
+                    android:id="@+id/mainActivity_pstuWebsite"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"
@@ -325,7 +325,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/developer"
+                    android:id="@+id/mainActivity_developer"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_margin="2dp"

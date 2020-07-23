@@ -37,6 +37,12 @@ public class StudentLoggedIn extends AppCompatActivity {
     public static final String JSON_ARRAY = "result";
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        loadStudentData();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_logged_in);
@@ -55,7 +61,12 @@ public class StudentLoggedIn extends AppCompatActivity {
         studentEmail = findViewById(R.id.studentLoggedIn_studentEmailAddress);
         goToStudentUpdate = findViewById(R.id.studentLoggedIn_studentUpdateBtn);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.show_student_persolal,
+        loadStudentData();
+
+    }
+
+    private void loadStudentData() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Student_Details,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -106,7 +117,7 @@ public class StudentLoggedIn extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(StudentLoggedIn.this, "Login faild", Toast.LENGTH_SHORT).show();
+
                     }
                 }
         ) {
@@ -125,7 +136,7 @@ public class StudentLoggedIn extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(StudentLoggedIn.this, StudentUpdate.class);
                 i.putExtra("name", studentName.getText().toString());
-                i.putExtra("id_no", studentID.getText().toString());
+                i.putExtra("Id_no", studentID.getText().toString());
                 i.putExtra("password", studentPassword.getText().toString());
                 i.putExtra("contact", studentContact.getText().toString());
                 i.putExtra("email", studentEmail.getText().toString());

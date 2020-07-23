@@ -2,9 +2,13 @@ package com.rafyee.rafyee_rajiv.pstuprofile.Dean;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -15,6 +19,7 @@ public class Dean extends AppCompatActivity {
 
     private ImageView backButton;
     private LinearLayout agricultureDean, cseDean, bbaDean, ansvmDean, fishariesDean, disasterDean, nfsDean, landDean, pgsDean;
+    private ImageView agricultureDeanImage, cseDeanImage, bbaDeanImage, ansvmDeanImage, fishariesDeanImage, disasterDeanImage, nfsDeanImage, landDeanImage, pgsDeanImage;
 
     private String agriculture_dean_name, agriculture_dean_designation, agriculture_dean_contact, agriculture_dean_email, agriculture_dean_fax, agriculture_dean_address;
     private String cse_dean_name, cse_dean_designation, cse_dean_contact, cse_dean_email, cse_dean_fax, cse_dean_address;
@@ -32,16 +37,26 @@ public class Dean extends AppCompatActivity {
         setContentView(R.layout.dean);
         getSupportActionBar().hide();
 
-        backButton = findViewById(R.id.activityDean_backButton);
-        agricultureDean = findViewById(R.id.agricultureDean);
-        cseDean = findViewById(R.id.cseDean);
-        bbaDean = findViewById(R.id.bbaDean);
-        ansvmDean = findViewById(R.id.ansvmDean);
-        fishariesDean = findViewById(R.id.fishariesDean);
-        disasterDean = findViewById(R.id.disasterDean);
-        nfsDean = findViewById(R.id.nfsDean);
-        landDean = findViewById(R.id.landDean);
-        pgsDean = findViewById(R.id.pgsDean);
+        backButton = findViewById(R.id.dean_backButton);
+        agricultureDean = findViewById(R.id.dean_agricultureDean);
+        cseDean = findViewById(R.id.dean_cseDean);
+        bbaDean = findViewById(R.id.dean_bbaDean);
+        ansvmDean = findViewById(R.id.dean_ansvmDean);
+        fishariesDean = findViewById(R.id.dean_fishariesDean);
+        disasterDean = findViewById(R.id.dean_disasterDean);
+        nfsDean = findViewById(R.id.dean_nfsDean);
+        landDean = findViewById(R.id.dean_landDean);
+        pgsDean = findViewById(R.id.dean_pgsDean);
+
+        agricultureDeanImage = findViewById(R.id.dean_agricultureDeanImage);
+        cseDeanImage = findViewById(R.id.dean_cseDeanImage);
+        bbaDeanImage = findViewById(R.id.dean_bbaDeanImage);
+        ansvmDeanImage = findViewById(R.id.dean_ansvmDeanImage);
+        fishariesDeanImage = findViewById(R.id.dean_fishariesDeanImage);
+        disasterDeanImage = findViewById(R.id.dean_esdmDeanImage);
+        nfsDeanImage = findViewById(R.id.dean_nfsDeanImage);
+        landDeanImage = findViewById(R.id.dean_landDeanImage);
+        pgsDeanImage = findViewById(R.id.dean_pgsDeanImage);
 
         getAllStrings();
 
@@ -72,6 +87,12 @@ public class Dean extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
+        agricultureDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.agri_fish_dean);
+            }
+        });
 
         cseDean.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +109,12 @@ public class Dean extends AppCompatActivity {
                 startActivity(cseDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
+        cseDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.cse_dean);
             }
         });
 
@@ -108,6 +135,12 @@ public class Dean extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
+        bbaDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.bba_dean);
+            }
+        });
 
         ansvmDean.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +157,12 @@ public class Dean extends AppCompatActivity {
                 startActivity(ansvmDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
+        ansvmDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.ansvm_dean);
             }
         });
 
@@ -144,6 +183,12 @@ public class Dean extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
+        fishariesDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.agri_fish_dean);
+            }
+        });
 
         disasterDean.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,6 +205,12 @@ public class Dean extends AppCompatActivity {
                 startActivity(disasterDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
+        disasterDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.vc_sir);
             }
         });
 
@@ -180,6 +231,12 @@ public class Dean extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
+        nfsDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.vc_sir);
+            }
+        });
 
         landDean.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,6 +253,12 @@ public class Dean extends AppCompatActivity {
                 startActivity(landDeanIntent);
                 finish();
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
+            }
+        });
+        landDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.land_pgs_dean);
             }
         });
 
@@ -216,6 +279,28 @@ public class Dean extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_from_left, R.anim.slideout_from_right);
             }
         });
+        pgsDeanImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageDialog(R.drawable.land_pgs_dean);
+            }
+        });
+    }
+
+    private void imageDialog(int image) {
+
+        final Dialog imageDialog = new Dialog(this);
+        imageDialog.setContentView(R.layout.dialog_image);
+        imageDialog.setCancelable(true);
+
+        imageDialog.getWindow().getAttributes().windowAnimations = R.style.FadeInAndFadeOut;
+        imageDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        imageDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        ImageView fullImage = imageDialog.findViewById(R.id.dialogImage_image);
+        fullImage.setImageResource(image);
+
+        imageDialog.show();
     }
 
     public void onBackPressed() {

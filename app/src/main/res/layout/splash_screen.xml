@@ -11,13 +11,13 @@
     tools:context="com.rafyee.rafyee_rajiv.pstuprofile.SplashScreen">
 
     <ImageView
-        android:id="@+id/pstu_icon"
+        android:id="@+id/splashScreen_pstuIcon"
         android:layout_width="300dp"
         android:layout_height="250dp"
         android:src="@drawable/pstulogo" />
 
     <TextView
-        android:id="@+id/pstu_text"
+        android:id="@+id/splashScreen_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"

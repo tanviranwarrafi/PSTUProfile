@@ -98,7 +98,7 @@ public class StudentLogin extends AppCompatActivity {
             String response = null;
             final String finalResponse = response;
 
-            StringRequest postRequest = new StringRequest(Request.Method.POST, Config.Student_Login,
+            StringRequest postRequest = new StringRequest(Request.Method.POST, Config.Studen_Login,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

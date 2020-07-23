@@ -57,8 +57,8 @@ public class StudentSignUp extends AppCompatActivity {
         SignUp = findViewById(R.id.studentSignUp_signUpBtn);
         gotoSignIn = findViewById(R.id.studentSignUp_signIn);
 
-        studentFaculty = findViewById(R.id.studentSignUp_studentFaculty);
-        studentBatch = findViewById(R.id.studentSignUp_studentBatch);
+        studentFaculty = findViewById(R.id.studentSignUp_FacultySpinner);
+        studentBatch = findViewById(R.id.studentSignUp_BatchSpinner);
 
         gotoSignIn.setOnClickListener(new View.OnClickListener() {
             @Override

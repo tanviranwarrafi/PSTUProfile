@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/showCourseFaculty_backButton"
+            android:id="@+id/courseFaculty_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -59,7 +59,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/showCourseFaculty_backButton"
+            app:layout_constraintStart_toEndOf="@+id/courseFaculty_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -89,7 +89,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_agriculture"
+                    android:id="@+id/courseFaculty_agriculture"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginRight="12dp"
@@ -122,7 +122,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_cse"
+                    android:id="@+id/courseFaculty_cse"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="12dp"
@@ -167,7 +167,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_bba"
+                    android:id="@+id/courseFaculty_bba"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginRight="12dp"
@@ -202,7 +202,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_nfs"
+                    android:id="@+id/courseFaculty_nfs"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="12dp"
@@ -247,7 +247,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_disasterManagement"
+                    android:id="@+id/courseFaculty_esdm"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginRight="12dp"
@@ -282,7 +282,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_dvm"
+                    android:id="@+id/courseFaculty_dvm"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="12dp"
@@ -327,7 +327,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_fisharies"
+                    android:id="@+id/courseFaculty_fisharies"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginRight="12dp"
@@ -360,7 +360,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_landManagement"
+                    android:id="@+id/courseFaculty_nfslandManagement"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="12dp"
@@ -404,7 +404,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/showCourseFaculty_animalHusbendary"
+                    android:id="@+id/courseFaculty_animalHusbandary"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginRight="12dp"
@@ -437,7 +437,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/mainActivity_showAllStudent"
+                    android:id="@+id/courseFaculty_newFaculty"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginLeft="12dp"

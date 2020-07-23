@@ -224,12 +224,12 @@
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:visibility="gone"
-                    app:layout_constraintBottom_toTopOf="@+id/teacherLogin_teacherLoginBtn"
+                    app:layout_constraintBottom_toTopOf="@+id/teacherLogin_LoginBtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <LinearLayout
-                    android:id="@+id/SignUp_teacher"
+                    android:id="@+id/teacherSignUp_signUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -262,22 +262,24 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:orientation="horizontal"
                     android:layout_marginBottom="16dp">
 
                     <TextView
-                        android:id="@+id/no_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/bensen_handwriting"
                         android:text="@string/teacherSignUp_alreadyHaveAnyAccount"
-                        android:textColor="@color/colorText"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/studentLogin_studentSignUp"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        android:textColor="@color/colorText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" "/>
 
                     <TextView
                         android:id="@+id/teacherSignUp_signIn"
@@ -286,11 +288,9 @@
                         android:fontFamily="@font/bensen_handwriting"
                         android:text="@string/teacherSignUp_signInPlease"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/no_id"
-                        app:layout_constraintStart_toEndOf="@+id/no_id" />
+                        android:textStyle="bold" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

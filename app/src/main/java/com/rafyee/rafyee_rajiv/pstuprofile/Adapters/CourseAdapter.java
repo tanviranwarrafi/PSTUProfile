@@ -56,8 +56,8 @@ public class CourseAdapter extends BaseAdapter {
         courseTitle.setText(su.getCourse_title());
 
         final String course_title = su.getCourse_title();
-        String course_code = su.getCourse_code();
-        String course_credit = su.getCredit();
+        final String course_code = su.getCourse_code();
+        final String course_credit = su.getCredit();
 
         final View finalConvertView = convertView;
 
@@ -72,8 +72,13 @@ public class CourseAdapter extends BaseAdapter {
                 courseDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 courseDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-                TextView dialogCourseTitle = courseDialog.findViewById(R.id.dialog_course_title);
+                TextView dialogCourseTitle = courseDialog.findViewById(R.id.dialogCourse_courseTitle);
+                TextView dialogCourseCredit = courseDialog.findViewById(R.id.dialogCourse_courseCredit);
+                TextView dialogCourseCode = courseDialog.findViewById(R.id.dialogCourse_courseCode);
                 dialogCourseTitle.setText(course_title);
+                dialogCourseCode.setText(course_code + " Credit Hour");
+                dialogCourseCredit.setText(course_credit);
+
                 courseDialog.show();
             }
         });

@@ -26,8 +26,8 @@ public class SplashScreen extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.splash_screen);
 
-        imageView = findViewById(R.id.pstu_icon);
-        textView1 = findViewById(R.id.pstu_text);
+        imageView = findViewById(R.id.splashScreen_pstuIcon);
+        textView1 = findViewById(R.id.splashScreen_title);
 
         top = AnimationUtils.loadAnimation(this, R.anim.top);
         bottom = AnimationUtils.loadAnimation(this, R.anim.bottom);

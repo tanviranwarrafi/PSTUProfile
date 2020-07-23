@@ -26,17 +26,17 @@ public class StudentDetails extends AppCompatActivity {
         setContentView(R.layout.student_details);
         getSupportActionBar().hide();
 
-        backButton = findViewById(R.id.studentPersonalDetails_backButton);
-        studentName = findViewById(R.id.studentPersonalDetails_studentName);
-        studentID = findViewById(R.id.studentPersonalDetails_studentIDNo);
-        studentRegistration = findViewById(R.id.studentPersonalDetails_studentRegistrationNo);
-        studentFaculty = findViewById(R.id.studentPersonalDetails_studentFaculty);
-        studentBatch = findViewById(R.id.studentPersonalDetails_studentBatch);
-        studentContact = findViewById(R.id.studentPersonalDetails_studentContactNo);
-        studentEmail = findViewById(R.id.studentPersonalDetails_studentEmailAddress);
-        call = findViewById(R.id.btnCall);
-        sendSMS = findViewById(R.id.studentPersonalDetails_sendSMS);
-        sendEmail = findViewById(R.id.btnEmail);
+        backButton = findViewById(R.id.studentDetails_backButton);
+        studentName = findViewById(R.id.studentDetails_studentName);
+        studentID = findViewById(R.id.studentDetails_studentIDNo);
+        studentRegistration = findViewById(R.id.studentDetails_studentRegistrationNo);
+        studentFaculty = findViewById(R.id.studentDetails_studentFaculty);
+        studentBatch = findViewById(R.id.studentDetails_studentBatch);
+        studentContact = findViewById(R.id.studentDetails_studentContactNo);
+        studentEmail = findViewById(R.id.studentDetails_studentEmailAddress);
+        call = findViewById(R.id.studentDetails_btnCall);
+        sendSMS = findViewById(R.id.studentDetails_sendSMS);
+        sendEmail = findViewById(R.id.studentDetails_btnEmail);
 
         Intent intent = getIntent();
         name = intent.getExtras().getString("name");

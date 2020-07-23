@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/studentPersonalDetails_backButton"
+            android:id="@+id/studentDetails_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -60,7 +60,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/studentPersonalDetails_backButton"
+            app:layout_constraintStart_toEndOf="@+id/studentDetails_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -101,7 +101,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/studentPersonalDetails_studentName"
+                android:id="@+id/studentDetails_studentName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -126,7 +126,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/studentPersonalDetails_studentIDNo"
+                android:id="@+id/studentDetails_studentIDNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -151,7 +151,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/studentPersonalDetails_studentRegistrationNo"
+                android:id="@+id/studentDetails_studentRegistrationNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -176,7 +176,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/studentPersonalDetails_studentFaculty"
+                android:id="@+id/studentDetails_studentFaculty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -201,7 +201,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/studentPersonalDetails_studentBatch"
+                android:id="@+id/studentDetails_studentBatch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -226,7 +226,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/studentPersonalDetails_studentContactNo"
+                android:id="@+id/studentDetails_studentContactNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -251,7 +251,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/studentPersonalDetails_studentEmailAddress"
+                android:id="@+id/studentDetails_studentEmailAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -275,7 +275,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
-            android:id="@+id/btnCall"
+            android:id="@+id/studentDetails_btnCall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -310,7 +310,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/studentPersonalDetails_sendSMS"
+            android:id="@+id/studentDetails_sendSMS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -346,7 +346,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/btnEmail"
+            android:id="@+id/studentDetails_btnEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/teacherPersonalDetails_backButton"
+            android:id="@+id/teacherDetails_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -60,7 +60,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/teacherPersonalDetails_backButton"
+            app:layout_constraintStart_toEndOf="@+id/teacherDetails_backButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
@@ -99,7 +99,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/teacherPersonalDetails_teacherName"
+                android:id="@+id/teacherDetails_teacherName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -124,7 +124,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/teacherPersonalDetails_teacherPost"
+                android:id="@+id/teacherDetails_teacherPost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -149,7 +149,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/teacherPersonalDetails_teacherFaculty"
+                android:id="@+id/teacherDetails_teacherFaculty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -174,7 +174,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/teacherPersonalDetails_teacherDepartment"
+                android:id="@+id/teacherDetails_teacherDepartment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -199,7 +199,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/teacherPersonalDetails_teacherEmail"
+                android:id="@+id/teacherDetails_teacherEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -224,7 +224,7 @@
                 android:tint="@color/colorText" />
 
             <TextView
-                android:id="@+id/teacherPersonalDetails_teacherContactNo"
+                android:id="@+id/teacherDetails_teacherContactNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -248,7 +248,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
-            android:id="@+id/teacherPersonalDetails_teacherCallBtn"
+            android:id="@+id/teacherDetails_CallBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -283,7 +283,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/teacherPersonalDetails_sendSMS"
+            android:id="@+id/teacherDetails_sendSMS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -319,7 +319,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/teacherPersonalDetails_teacherSendEmail"
+            android:id="@+id/teacherDetails_SendEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

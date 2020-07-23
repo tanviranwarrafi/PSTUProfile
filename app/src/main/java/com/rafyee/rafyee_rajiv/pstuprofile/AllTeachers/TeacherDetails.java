@@ -26,16 +26,16 @@ public class TeacherDetails extends AppCompatActivity {
         setContentView(R.layout.teacher_details);
         getSupportActionBar().hide();
 
-        backButton = findViewById(R.id.teacherPersonalDetails_backButton);
-        teacherName = findViewById(R.id.teacherPersonalDetails_teacherName);
-        teacherPost = findViewById(R.id.teacherPersonalDetails_teacherPost);
-        teacherDepartment = findViewById(R.id.teacherPersonalDetails_teacherDepartment);
-        teacherFaculty = findViewById(R.id.teacherPersonalDetails_teacherFaculty);
-        teacherContact = findViewById(R.id.teacherPersonalDetails_teacherContactNo);
-        teacherEmail = findViewById(R.id.teacherPersonalDetails_teacherEmail);
-        call = findViewById(R.id.teacherPersonalDetails_teacherCallBtn);
-        sendSMS = findViewById(R.id.teacherPersonalDetails_sendSMS);
-        sendEmail = findViewById(R.id.teacherPersonalDetails_teacherSendEmail);
+        backButton = findViewById(R.id.teacherDetails_backButton);
+        teacherName = findViewById(R.id.teacherDetails_teacherName);
+        teacherPost = findViewById(R.id.teacherDetails_teacherPost);
+        teacherDepartment = findViewById(R.id.teacherDetails_teacherDepartment);
+        teacherFaculty = findViewById(R.id.teacherDetails_teacherFaculty);
+        teacherContact = findViewById(R.id.teacherDetails_teacherContactNo);
+        teacherEmail = findViewById(R.id.teacherDetails_teacherEmail);
+        call = findViewById(R.id.teacherDetails_CallBtn);
+        sendSMS = findViewById(R.id.teacherDetails_sendSMS);
+        sendEmail = findViewById(R.id.teacherDetails_SendEmail);
 
         Intent intent = getIntent();
         name = intent.getExtras().getString("t_name");

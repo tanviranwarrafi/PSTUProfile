@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/activityDean_backButton"
+            android:id="@+id/dean_backButton"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginStart="8dp"
@@ -57,11 +57,11 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/activityDean_backButton"
+            app:layout_constraintBottom_toBottomOf="@+id/dean_backButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/activityDean_backButton"
-            app:layout_constraintTop_toTopOf="@+id/activityDean_backButton"
+            app:layout_constraintStart_toEndOf="@+id/dean_backButton"
+            app:layout_constraintTop_toTopOf="@+id/dean_backButton"
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -87,7 +87,7 @@
             android:paddingEnd="16dp">
 
             <LinearLayout
-                android:id="@+id/agricultureDean"
+                android:id="@+id/dean_agricultureDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -100,7 +100,9 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_agricultureDeanImage"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
@@ -141,7 +143,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/cseDean"
+                android:id="@+id/dean_cseDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -155,6 +157,7 @@
                 android:paddingBottom="8dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_cseDeanImage"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -196,7 +199,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/bbaDean"
+                android:id="@+id/dean_bbaDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -210,6 +213,7 @@
                 android:paddingBottom="8dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_bbaDeanImage"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -251,7 +255,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ansvmDean"
+                android:id="@+id/dean_ansvmDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -264,7 +268,9 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_ansvmDeanImage"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
@@ -305,7 +311,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/fishariesDean"
+                android:id="@+id/dean_fishariesDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -319,6 +325,7 @@
                 android:paddingBottom="8dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_fishariesDeanImage"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -360,7 +367,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/disasterDean"
+                android:id="@+id/dean_disasterDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -374,6 +381,7 @@
                 android:paddingBottom="8dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_esdmDeanImage"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -415,7 +423,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/nfsDean"
+                android:id="@+id/dean_nfsDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -429,6 +437,7 @@
                 android:paddingBottom="8dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_nfsDeanImage"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -470,7 +479,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/landDean"
+                android:id="@+id/dean_landDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -484,6 +493,7 @@
                 android:paddingBottom="8dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_landDeanImage"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -525,7 +535,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/pgsDean"
+                android:id="@+id/dean_pgsDean"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -539,6 +549,7 @@
                 android:paddingBottom="8dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dean_pgsDeanImage"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
