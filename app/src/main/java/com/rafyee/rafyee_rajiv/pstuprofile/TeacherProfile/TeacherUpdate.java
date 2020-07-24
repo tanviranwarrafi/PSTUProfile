@@ -102,7 +102,7 @@ public class TeacherUpdate extends AppCompatActivity {
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Toast.makeText(TeacherUpdate.this,  "আপডেট সফল হয়েছে", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TeacherUpdate.this, "আপডেট সফল হয়েছে", Toast.LENGTH_SHORT).show();
                             }
                         }, new Response.ErrorListener() {
 

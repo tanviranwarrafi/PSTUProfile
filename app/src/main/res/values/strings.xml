@@ -204,6 +204,10 @@
     <string name="studentSignUp_alreadyHaveAnyAccount">আপনার কি একাউন্ট আছে? </string>
     <string name="studentSignUp_signInPlease">সাইন ইন করুন</string>
 
+    <string name="studentSignUp_errorCampusId">৭ ডিজিটের আইডি ডিন</string>
+    <string name="studentSignUp_errorContact">১১ ডিজিটের মোবাইল নাম্বার দিন</string>
+    <string name="studentSignUp_errorEmail">সঠিক ই-মেইল দিন</string>
+
     <!-- Student Update -->
     <string name="studentUpdate_studentUpdate">শিক্ষার্থী আপডেট</string>
     <string name="studentUpdate_studentName">ছাত্র-ছাত্রীর নাম</string>
@@ -258,6 +262,11 @@
     <string name="teacherSignUp_signUp">সাইন আপ করুন</string>
     <string name="teacherSignUp_alreadyHaveAnyAccount">আপনার কি একাউন্ট আছে? </string>
     <string name="teacherSignUp_signInPlease">সাইন ইন করুন</string>
+
+    <string name="teacherSignUp_contactError">১১ ডিজিটের মোবাইল নাম্বার দিন</string>
+    <string name="teacherSignUp_emailError">সঠিক ই-মেইল দিন</string>
+
+
 
     <!-- Teacher Update -->
     <string name="teacherUpdate_teacherUpdate">শিক্ষক আপডেট</string>

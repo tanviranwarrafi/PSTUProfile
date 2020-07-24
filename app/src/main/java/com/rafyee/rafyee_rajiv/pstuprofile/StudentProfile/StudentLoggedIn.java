@@ -136,7 +136,7 @@ public class StudentLoggedIn extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(StudentLoggedIn.this, StudentUpdate.class);
                 i.putExtra("name", studentName.getText().toString());
-                i.putExtra("Id_no", studentID.getText().toString());
+                i.putExtra("Id_no", gotID);
                 i.putExtra("password", studentPassword.getText().toString());
                 i.putExtra("contact", studentContact.getText().toString());
                 i.putExtra("email", studentEmail.getText().toString());

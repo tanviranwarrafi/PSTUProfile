@@ -1,12 +1,19 @@
 package com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -16,6 +23,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rafyee.rafyee_rajiv.pstuprofile.MySingleton;
 import com.rafyee.rafyee_rajiv.pstuprofile.R;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -26,6 +34,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
 import com.rafyee.rafyee_rajiv.pstuprofile.MainActivity;
+import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLogin;
+import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherSignUp;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,9 +49,11 @@ public class StudentSignUp extends AppCompatActivity {
             studentContact, studentEmail;
     private Spinner studentFaculty, studentBatch;
     private ProgressBar progressBar;
-    private LinearLayout SignUp;
+    private Button SignUp;
     private TextView gotoSignIn;
-    private String name, id_no, registration_no, password, faculty, batch, contact_no, email;
+
+    private String faculty, batch;
+    private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +119,104 @@ public class StudentSignUp extends AppCompatActivity {
             }
         });
 
+        studentName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        studentID.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        studentRegistrationNo.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        studentPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        studentContact.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        studentEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,62 +225,111 @@ public class StudentSignUp extends AppCompatActivity {
         });
     }
 
-    private void signUpStudent() {
-        if (studentName.getText().toString().equals("") &&
-                studentID.getText().toString().equals("") &&
-                studentRegistrationNo.getText().toString().equals("") &&
-                studentPassword.getText().toString().equals("") &&
-                studentContact.getText().toString().equals("") &&
-                studentEmail.getText().toString().equals("")) {
-
-            Toast.makeText(StudentSignUp.this, "অনুগ্রহ পূর্বক সব তথ্য পূরণ করুন", Toast.LENGTH_SHORT).show();
-        } else {
-            name = studentName.getText().toString();
-            id_no = studentID.getText().toString();
-            registration_no = studentRegistrationNo.getText().toString();
-            password = studentPassword.getText().toString();
-            contact_no = studentContact.getText().toString();
-            email = studentEmail.getText().toString();
-
-            progressBar.setVisibility(View.VISIBLE);
-            RequestQueue requestQueue = Volley.newRequestQueue(StudentSignUp.this);
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Student_Registration,
-                    new Response.Listener<String>() {
-
-                        @Override
-                        public void onResponse(String response) {
-                            progressBar.setVisibility(View.GONE);
-                            Toast.makeText(StudentSignUp.this, response, Toast.LENGTH_SHORT).show();
-                            Log.d("response", response);
-                            if (response == "Success") {
-                                Intent intent = new Intent(StudentSignUp.this, MainActivity.class);
-                                startActivity(intent);
+    @SuppressLint("ResourceAsColor")
+    private void checkInputs() {
+        if (!TextUtils.isEmpty(studentName.getText())) {
+            if (!TextUtils.isEmpty(studentID.getText())) {
+                if (!TextUtils.isEmpty(studentRegistrationNo.getText())) {
+                    if (!TextUtils.isEmpty(studentPassword.getText())) {
+                        if (!TextUtils.isEmpty(studentContact.getText())){
+                            if (!TextUtils.isEmpty(studentContact.getText())){
+                                SignUp.setEnabled(true);
                             } else {
-                                Toast.makeText(StudentSignUp.this, response, Toast.LENGTH_SHORT).show();
+                                SignUp.setEnabled(false);
                             }
+                        }else{
+                            SignUp.setEnabled(false);
                         }
-                    }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    progressBar.setVisibility(View.GONE);
-                    Toast.makeText(StudentSignUp.this, "সাইন আপ ব্যর্থ হয়েছে। অনুগ্রহ পূর্বক সব তথ্য পূরণ করুন", Toast.LENGTH_SHORT).show();
+                    } else {
+                        SignUp.setEnabled(false);
+                    }
+                } else {
+                    SignUp.setEnabled(false);
                 }
-            }) {
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("name", name);
-                    params.put("Id_no", id_no);
-                    params.put("reg_no", registration_no);
-                    params.put("pass", password);
-                    params.put("faculty", faculty);
-                    params.put("batch", batch);
-                    params.put("contact", contact_no);
-                    params.put("email", email);
-                    return params;
+            }  else {
+                SignUp.setEnabled(false);
+            }
+        }
+    }
+
+    private void signUpStudent() {
+
+        String campusIdError = getResources().getString(R.string.studentSignUp_errorCampusId);
+        String emailError = getResources().getString(R.string.studentSignUp_errorEmail);
+        String contactError = getResources().getString(R.string.studentSignUp_errorContact);
+
+        Drawable customErrorIcon = getResources().getDrawable(R.drawable.error_24);
+        customErrorIcon.setBounds(0,0,customErrorIcon.getIntrinsicWidth(),customErrorIcon.getIntrinsicHeight());
+
+        if (studentEmail.getText().toString().matches(emailPattern)){
+            if(studentContact.length()>10 && studentContact.length()<12){
+                if (studentID.length()>6 && studentID.length()<8){
+
+                    progressBar.setVisibility(View.VISIBLE);
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Student_Registration,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    try {
+                                        progressBar.setVisibility(View.GONE);
+                                        JSONObject jsonObject = new JSONObject(response);
+                                        String Response = jsonObject.getString("response");
+
+                                        Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(StudentSignUp.this, StudentLogin.class);
+                                        startActivity(intent);
+                                        finish();
+                                        overridePendingTransition(R.anim.slide_from_right,R.anim.slideout_from_left);
+
+                                        /*if (Response == "registered") {
+                                            Toast.makeText(StudentSignUp.this, "Already registered", Toast.LENGTH_SHORT).show();
+                                            Log.d("registered id:", "onResponse: " + Response);
+                                        }else {
+                                            Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(StudentSignUp.this, StudentLogin.class);
+                                            startActivity(intent);
+                                            finish();
+                                            overridePendingTransition(R.anim.slide_from_right,R.anim.slideout_from_left);
+                                        }*/
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }) {
+                        @Override
+                        protected Map<String, String> getParams() throws AuthFailureError {
+                            Map<String, String> params = new HashMap<>();
+
+                            params.put("name", studentName.getText().toString());
+                            params.put("Id_no", studentID.getText().toString());
+                            params.put("reg_no", studentRegistrationNo.getText().toString());
+                            params.put("pass", studentPassword.getText().toString());
+                            params.put("faculty", faculty);
+                            params.put("batch", batch);
+                            params.put("contact", studentContact.getText().toString());
+                            params.put("email", studentEmail.getText().toString());
+
+                            return params;
+                        }
+                    };
+
+                    MySingleton.getInstance(StudentSignUp.this).addToRequestQueue(stringRequest);
+
+                } else {
+                    studentID.setError(campusIdError, customErrorIcon);
                 }
-            };
-            requestQueue.add(stringRequest);
+            } else {
+                studentContact.setError(contactError, customErrorIcon);
+            }
+        } else {
+            studentEmail.setError(emailError, customErrorIcon);
         }
     }
 

@@ -1,7 +1,10 @@
 package com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -82,7 +85,7 @@ public class StudentUpdate extends AppCompatActivity {
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Toast.makeText(StudentUpdate.this, response, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(StudentUpdate.this,  "আপডেট সফল হয়েছে", Toast.LENGTH_SHORT).show();
                             }
                         }, new Response.ErrorListener() {
 
@@ -114,6 +117,7 @@ public class StudentUpdate extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(StudentUpdate.this, TeacherLoggedIn.class);
         intent.putExtra("Id_no", gotStudentId);
+        Log.d("onBackPressed", gotStudentId);
         startActivity(intent);
         finish();
         overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);

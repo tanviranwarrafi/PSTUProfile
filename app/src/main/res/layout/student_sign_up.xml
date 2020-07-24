@@ -157,8 +157,7 @@
                 android:fontFamily="@font/kalpurush"
                 android:textStyle="bold"
                 android:elevation="3dp"
-                android:entries="@array/facultys"
-                android:paddingTop="5dp" />
+                android:entries="@array/facultys" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -231,39 +230,24 @@
                     android:layout_gravity="center"
                     android:visibility="gone" />
 
-                <LinearLayout
+                <Button
                     android:id="@+id/studentSignUp_signUpBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/round_bg"
-                    android:backgroundTint="@color/amber_primary_dark"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="8dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="8dp"
-                        android:src="@drawable/call_round"
-                        android:tint="@color/white" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/bensen_handwriting"
-                        android:gravity="center"
-                        android:text="@string/studentSignUp_signUp"
-                        android:textAlignment="center"
-                        android:textAllCaps="false"
-                        android:textColor="#fff"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                    android:enabled="false"
+                    android:backgroundTint="@color/amber_primary_dark"
+                    android:fontFamily="@font/bensen_handwriting"
+                    android:text="@string/studentSignUp_signUp"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"

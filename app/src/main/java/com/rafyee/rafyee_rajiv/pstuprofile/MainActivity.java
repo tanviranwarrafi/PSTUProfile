@@ -1,8 +1,11 @@
 package com.rafyee.rafyee_rajiv.pstuprofile;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -16,6 +19,7 @@ import com.rafyee.rafyee_rajiv.pstuprofile.AllStudents.AllStudents;
 import com.rafyee.rafyee_rajiv.pstuprofile.AllTeachers.AllTeachers;
 import com.rafyee.rafyee_rajiv.pstuprofile.Cources.CourseFaculty;
 import com.rafyee.rafyee_rajiv.pstuprofile.Developer.Developer;
+import com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentLoggedIn;
 import com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentLogin;
 import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLogin;
 

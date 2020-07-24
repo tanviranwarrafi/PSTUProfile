@@ -1,11 +1,16 @@
 package com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -15,6 +20,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.rafyee.rafyee_rajiv.pstuprofile.MySingleton;
 import com.rafyee.rafyee_rajiv.pstuprofile.R;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -24,6 +30,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
+import com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentLogin;
+import com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentSignUp;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,11 +44,11 @@ public class TeacherSignUp extends AppCompatActivity {
     private EditText teacherName, teacherEmail, teacherContact, teacherPassword;
     private Spinner teacherPost, teacherDepartment, teacherFaculty;
     private ProgressBar progressBar;
-    private LinearLayout teacherSignUpBtn;
+    private Button teacherSignUpBtn;
     private TextView gotoSignIn;
     private String teacher_name, teacher_post, teacher_faculty, teacher_department,
             teacher_email, teacher_contact, teacher_password;
-
+    private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -176,6 +187,71 @@ public class TeacherSignUp extends AppCompatActivity {
             }
         });
 
+        teacherName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        teacherEmail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        teacherContact.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        teacherPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkInputs();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         teacherSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -184,58 +260,94 @@ public class TeacherSignUp extends AppCompatActivity {
         });
     }
 
+    private void checkInputs() {
+        if (!TextUtils.isEmpty(teacherName.getText())) {
+            if (!TextUtils.isEmpty(teacherEmail.getText())) {
+                if (!TextUtils.isEmpty(teacherContact.getText())) {
+                    if (!TextUtils.isEmpty(teacherContact.getText())) {
+                        teacherSignUpBtn.setEnabled(true);
+                    } else {
+                        teacherSignUpBtn.setEnabled(false);
+                    }
+                } else {
+                    teacherSignUpBtn.setEnabled(false);
+                }
+            }  else {
+                teacherSignUpBtn.setEnabled(false);
+            }
+        }
+    }
+
     private void teacherSignUp() {
 
-        if (teacherName.getText().toString().equals("") &&
-                teacherEmail.getText().toString().equals("") &&
-                teacherContact.getText().toString().equals("")) {
-            Toast.makeText(TeacherSignUp.this, "অনুগ্রহ পূর্বক সব তথ্য পূরণ করুন", Toast.LENGTH_SHORT).show();
-        } else {
-            teacher_name = teacherName.getText().toString();
-            teacher_email = teacherEmail.getText().toString();
-            teacher_contact = teacherContact.getText().toString();
-            teacher_password = teacherPassword.getText().toString();
+        String emailError = getResources().getString(R.string.teacherSignUp_emailError);
+        String contactError = getResources().getString(R.string.teacherSignUp_contactError);
 
-            progressBar.setVisibility(View.VISIBLE);
-            RequestQueue requestQueue = Volley.newRequestQueue(TeacherSignUp.this);
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Registration,
-                    new Response.Listener<String>() {
+        Drawable customErrorIcon = getResources().getDrawable(R.drawable.error_24);
+        customErrorIcon.setBounds(0,0,customErrorIcon.getIntrinsicWidth(),customErrorIcon.getIntrinsicHeight());
 
-                        @Override
-                        public void onResponse(String response) {
-                            progressBar.setVisibility(View.GONE);
-                            /*Toast.makeText(TeachersSignUpActivity.this, response, Toast.LENGTH_SHORT).show();*/
-                            if (response == "Success") {
-                                Intent intent = new Intent(TeacherSignUp.this, TeacherLogin.class);
-                                startActivity(intent);
-                                finish();
-                                overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
-                            } else {
-                                Toast.makeText(TeacherSignUp.this, response, Toast.LENGTH_SHORT).show();
+        if (teacherEmail.getText().toString().matches(emailPattern)){
+            if(teacherContact.length()>10 && teacherContact.length()<12) {
+
+                progressBar.setVisibility(View.VISIBLE);
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Registration,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    progressBar.setVisibility(View.GONE);
+                                    JSONObject jsonObject = new JSONObject(response);
+                                    String Response = jsonObject.getString("response");
+
+                                    /*Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();*/
+                                    Intent intent = new Intent(TeacherSignUp.this, TeacherLogin.class);
+                                    startActivity(intent);
+                                    finish();
+                                    overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+
+                                        /*if (Response == "registered") {
+                                            Toast.makeText(StudentSignUp.this, "Already registered", Toast.LENGTH_SHORT).show();
+                                            Log.d("registered id:", "onResponse: " + Response);
+                                        }else {
+                                            Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(StudentSignUp.this, StudentLogin.class);
+                                            startActivity(intent);
+                                            finish();
+                                            overridePendingTransition(R.anim.slide_from_right,R.anim.slideout_from_left);
+                                        }*/
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
                             }
-                        }
-                    }, new Response.ErrorListener() {
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        progressBar.setVisibility(View.GONE);
+                    }
+                }) {
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        Map<String, String> params = new HashMap<>();
+                        params.put("t_name", teacherName.getText().toString());
+                        params.put("t_post", teacher_post);
+                        params.put("t_faculty", teacher_faculty);
+                        params.put("t_dept", teacher_department);
+                        params.put("t_pass", teacherPassword.getText().toString());
+                        params.put("t_email", teacherEmail.getText().toString());
+                        params.put("t_contact", teacherContact.getText().toString());
+                        return params;
+                    }
+                };
 
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    progressBar.setVisibility(View.GONE);
-                    Toast.makeText(TeacherSignUp.this, error.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }) {
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("t_name", teacher_name);
-                    params.put("t_post", teacher_post);
-                    params.put("t_faculty", teacher_faculty);
-                    params.put("t_dept", teacher_department);
-                    params.put("t_pass", teacher_password);
-                    params.put("t_email", teacher_email);
-                    params.put("t_contact", teacher_contact);
-                    return params;
-                }
-            };
-            requestQueue.add(stringRequest);
+                MySingleton.getInstance(TeacherSignUp.this).addToRequestQueue(stringRequest);
+
+            } else {
+                teacherContact.setError(contactError, customErrorIcon);
+            }
+        } else {
+            teacherEmail.setError(emailError, customErrorIcon);
         }
     }
 
