@@ -123,12 +123,9 @@ public class Developer extends AppCompatActivity {
         skype.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setComponent(new ComponentName(
-                        "com.skype.android.lite",
-                        "com.skype.android.lite.SkypeActivity"
-                ));
-                startActivity(i);*/
+                Intent sky = new Intent("android.intent.action.VIEW");
+                sky.setData(Uri.parse("skype:" + getResources().getString(R.string.skype_account)));
+                startActivity(sky);
             }
         });
 

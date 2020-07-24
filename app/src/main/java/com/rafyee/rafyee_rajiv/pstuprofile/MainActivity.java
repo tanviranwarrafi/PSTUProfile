@@ -3,14 +3,18 @@ package com.rafyee.rafyee_rajiv.pstuprofile;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -41,12 +45,15 @@ public class MainActivity extends AppCompatActivity {
 
     private String pstu_website_link, websitepage_actionbar;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+        Window window = this.getWindow();
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.amber_primary_dark));
 
         imageSlider = findViewById(R.id.mainActivity_imageSlider);
         studentLogin = findViewById(R.id.mainActivity_studentLogin);
@@ -60,9 +67,15 @@ public class MainActivity extends AppCompatActivity {
         website = findViewById(R.id.mainActivity_pstuWebsite);
 
         List<SlideModel> slideModels = new ArrayList<>();
+        slideModels.add(new SlideModel(R.drawable.pstu_one, ""));
         slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
-        slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
-        slideModels.add(new SlideModel(R.drawable.pstu_twoo, ""));
+        slideModels.add(new SlideModel(R.drawable.pstu_three, ""));
+        slideModels.add(new SlideModel(R.drawable.pstu_four, ""));
+        slideModels.add(new SlideModel(R.drawable.pstu_five, ""));
+        slideModels.add(new SlideModel(R.drawable.pstu_six, ""));
+        slideModels.add(new SlideModel(R.drawable.pstu_seven, ""));
+        slideModels.add(new SlideModel(R.drawable.pstu_eight, ""));
+        slideModels.add(new SlideModel(R.drawable.pstu_nine, ""));
         imageSlider.setImageList(slideModels, true);
 
         viceChancellor.setOnClickListener(new View.OnClickListener() {

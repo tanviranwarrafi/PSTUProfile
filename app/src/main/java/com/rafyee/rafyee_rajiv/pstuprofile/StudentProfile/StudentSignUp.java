@@ -257,6 +257,9 @@ public class StudentSignUp extends AppCompatActivity {
         String campusIdError = getResources().getString(R.string.studentSignUp_errorCampusId);
         String emailError = getResources().getString(R.string.studentSignUp_errorEmail);
         String contactError = getResources().getString(R.string.studentSignUp_errorContact);
+        final String registeredId = getResources().getString(R.string.studentSignUp_registeredId);
+        final String registrationSuccess = getResources().getString(R.string.studentSignUp_registrationSuccess);
+        final String somethingWrong = getResources().getString(R.string.studentSignUp_somethingWrong);
 
         Drawable customErrorIcon = getResources().getDrawable(R.drawable.error_24);
         customErrorIcon.setBounds(0,0,customErrorIcon.getIntrinsicWidth(),customErrorIcon.getIntrinsicHeight());
@@ -275,22 +278,19 @@ public class StudentSignUp extends AppCompatActivity {
                                         JSONObject jsonObject = new JSONObject(response);
                                         String Response = jsonObject.getString("response");
 
-                                        Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(StudentSignUp.this, StudentLogin.class);
-                                        startActivity(intent);
-                                        finish();
-                                        overridePendingTransition(R.anim.slide_from_right,R.anim.slideout_from_left);
-
-                                        /*if (Response == "registered") {
-                                            Toast.makeText(StudentSignUp.this, "Already registered", Toast.LENGTH_SHORT).show();
-                                            Log.d("registered id:", "onResponse: " + Response);
+                                        if (Response.equals("registered")) {
+                                            Toast.makeText(StudentSignUp.this, registeredId, Toast.LENGTH_SHORT).show();
                                         }else {
-                                            Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();
-                                            Intent intent = new Intent(StudentSignUp.this, StudentLogin.class);
-                                            startActivity(intent);
-                                            finish();
-                                            overridePendingTransition(R.anim.slide_from_right,R.anim.slideout_from_left);
-                                        }*/
+                                            if (Response.equals("success")){
+                                                Toast.makeText(StudentSignUp.this, registrationSuccess, Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(StudentSignUp.this, StudentLogin.class);
+                                                startActivity(intent);
+                                                finish();
+                                                overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+                                            } else {
+                                                Toast.makeText(StudentSignUp.this, somethingWrong, Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
 
                                     } catch (JSONException e) {
                                         e.printStackTrace();
@@ -301,6 +301,7 @@ public class StudentSignUp extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             progressBar.setVisibility(View.GONE);
+                            Toast.makeText(StudentSignUp.this, somethingWrong, Toast.LENGTH_SHORT).show();
                         }
                     }) {
                         @Override

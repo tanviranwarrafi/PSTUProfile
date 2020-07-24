@@ -3,6 +3,8 @@
 
     <string name="title_name">Attention!!</string>
     <string name="message">Do you want to update or delete</string>
+    <string name="inDevelopment">ফিচারটি এখনো ডেভেলপমেন্ট এ আছে</string>
+
 
     <!-- Main Activity -->
     <string name="pstu_website_link">https://www.pstu.ac.bd/</string>
@@ -186,20 +188,21 @@
     <string name="studentLogin_campusId">ক্যাম্পাস আইডি</string>
     <string name="studentLogin_password">গোপন পাসওয়ার্ড</string>
     <string name="studentLogin_forgotPassword">আপনি কি পাসওয়ার্ড ভুলে গেছেন?</string>
+    <string name="studentLogin_rememberpassword">পাসওয়ার্ড দেখুন</string>
     <string name="studentLogin_signIn">সাইন ইন</string>
     <string name="studentLogin_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই? </string>
     <string name="studentLogin_signInPlease">সাইন আপ করুন</string>
 
     <!-- Student SignUp -->
     <string name="studentSignUp_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই?</string>
-    <string name="studentSignUp_studentName">ছাত্র-ছাত্রীর নাম</string>
-    <string name="studentSignUp_campusId">ক্যাম্পাস আইডি নম্বর</string>
-    <string name="studentSignUp_registrationNo">রেজিস্ট্রেশন নম্বর</string>
-    <string name="studentSignUp_password">পাসওয়ার্ড</string>
-    <string name="studentSignUp_selectFaculty">ফ্যাকাল্টি সিলেক্ট করুনঃ </string>
-    <string name="studentSignUp_selectBatch">ব্যাচ সিলেক্ট করুনঃ</string>
-    <string name="studentSignUp_contactNo">মোবাইল নম্বর</string>
-    <string name="studentSignUp_email">ই-মেইল এডড্রেস</string>
+    <string name="studentSignUp_studentName">ছাত্র-ছাত্রীর নাম*</string>
+    <string name="studentSignUp_campusId">ক্যাম্পাস আইডি নম্বর*</string>
+    <string name="studentSignUp_registrationNo">রেজিস্ট্রেশন নম্বর*</string>
+    <string name="studentSignUp_password">পাসওয়ার্ড*</string>
+    <string name="studentSignUp_selectFaculty">ফ্যাকাল্টি সিলেক্ট করুন* </string>
+    <string name="studentSignUp_selectBatch">ব্যাচ সিলেক্ট করুন*</string>
+    <string name="studentSignUp_contactNo">মোবাইল নম্বর (১১ ডিজিট)*</string>
+    <string name="studentSignUp_email">ই-মেইল এডড্রেস*</string>
     <string name="studentSignUp_signUp">সাইন আপ করুন</string>
     <string name="studentSignUp_alreadyHaveAnyAccount">আপনার কি একাউন্ট আছে? </string>
     <string name="studentSignUp_signInPlease">সাইন ইন করুন</string>
@@ -208,6 +211,10 @@
     <string name="studentSignUp_errorContact">১১ ডিজিটের মোবাইল নাম্বার দিন</string>
     <string name="studentSignUp_errorEmail">সঠিক ই-মেইল দিন</string>
 
+    <string name="studentSignUp_registeredId">দুঃখিত!! এটি রেজিস্টার্ড আইডি</string>
+    <string name="studentSignUp_registrationSuccess">রেজিস্ট্রেশন সফল হয়েছে</string>
+    <string name="studentSignUp_somethingWrong">দুঃখিত!! পুনরায় চেস্টা করুন</string>
+
     <!-- Student Update -->
     <string name="studentUpdate_studentUpdate">শিক্ষার্থী আপডেট</string>
     <string name="studentUpdate_studentName">ছাত্র-ছাত্রীর নাম</string>
@@ -215,6 +222,9 @@
     <string name="studentUpdate_newContactNo">নতুন মোবাইল নম্বর</string>
     <string name="studentUpdate_newEmail">নতুন ই-মেইল এডড্রেস</string>
     <string name="studentUpdate_update">আপডেট করুন</string>
+
+    <string name="studentUpdate_somethingWrong">দুঃখিত!! পুনরায় চেস্টা করুন</string>
+    <string name="studentUpdate_updateSuccess">আপডেট সফল হয়েছে</string>
 
     <!-- Teacher Details -->
     <string name="teacherDetails_teacherProfile">শিক্ষক প্রোফাইল</string>
@@ -246,19 +256,20 @@
     <string name="teacherLogin_teacherEmail">ই-মেইল এডড্রেস</string>
     <string name="teacherLogin_password">গোপন পাসওয়ার্ড</string>
     <string name="teacherLogin_forgotPassword">আপনি কি পাসওয়ার্ড ভুলে গেছেন?</string>
+    <string name="teacherLogin_rememberpassword">পাসওয়ার্ড দেখুন</string>
     <string name="teacherLogin_signIn">সাইন ইন</string>
     <string name="teacherLogin_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই? </string>
     <string name="teacherLogin_signInPlease"> সাইন আপ করুন</string>
 
     <!-- Teacher SignUp -->
     <string name="teacherSignUp_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই?</string>
-    <string name="teacherSignUp_teacherName">শিক্ষকের নাম</string>
-    <string name="teacherSignUp_selectDesignation">ডেজিগনেশন শিলেক্ট করুনঃ </string>
-    <string name="teacherSignUp_selectFaculty">ফ্যাকাল্টি সিলেক্ট করুনঃ </string>
-    <string name="teacherSignUp_selectDepartment">ডিপার্টমেন্ট সিলেক্ট করুনঃ</string>
-    <string name="teacherSignUp_password">পাসওয়ার্ড</string>
-    <string name="teacherSignUp_email">ই-মেইল এডড্রেস</string>
-    <string name="teacherSignUp_contactNo">মোবাইল নম্বর</string>
+    <string name="teacherSignUp_teacherName">শিক্ষকের নাম*</string>
+    <string name="teacherSignUp_selectDesignation">ডেজিগনেশন শিলেক্ট করুন*</string>
+    <string name="teacherSignUp_selectFaculty">ফ্যাকাল্টি সিলেক্ট করুন*</string>
+    <string name="teacherSignUp_selectDepartment">ডিপার্টমেন্ট সিলেক্ট করুন*</string>
+    <string name="teacherSignUp_password">পাসওয়ার্ড*</string>
+    <string name="teacherSignUp_email">ই-মেইল এডড্রেস*</string>
+    <string name="teacherSignUp_contactNo">মোবাইল নম্বর*</string>
     <string name="teacherSignUp_signUp">সাইন আপ করুন</string>
     <string name="teacherSignUp_alreadyHaveAnyAccount">আপনার কি একাউন্ট আছে? </string>
     <string name="teacherSignUp_signInPlease">সাইন ইন করুন</string>
@@ -266,7 +277,9 @@
     <string name="teacherSignUp_contactError">১১ ডিজিটের মোবাইল নাম্বার দিন</string>
     <string name="teacherSignUp_emailError">সঠিক ই-মেইল দিন</string>
 
-
+    <string name="teacherSignUp_registeredEmail">দুঃখিত!! এটি রেজিস্টার্ড ই-মেইল</string>
+    <string name="teacherSignUp_registrationSuccess">রেজিস্ট্রেশন সফল হয়েছে</string>
+    <string name="teacherSignUp_somethingWrong">দুঃখিত!! পুনরায় চেস্টা করুন</string>
 
     <!-- Teacher Update -->
     <string name="teacherUpdate_teacherUpdate">শিক্ষক আপডেট</string>
@@ -275,6 +288,9 @@
     <string name="teacherUpdate_newPassword">নতুন পাসওয়ার্ড</string>
     <string name="tacherUpdate_newContactNo">নতুন মোবাইল নম্বর</string>
     <string name="teacherUpdate_update">আপডেট করুন</string>
+
+    <string name="teacherUpdate_somethingWrong">দুঃখিত!! পুনরায় চেস্টা করুন</string>
+    <string name="teacherUpdate_updateSuccess">আপডেট সফল হয়েছে</string>
 
     <!-- Vice Chancellor -->
     <string name="viceChancellor_viceChancellor">ভাইস-চ্যান্সেলর</string>

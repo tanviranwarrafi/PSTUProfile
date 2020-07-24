@@ -2,12 +2,14 @@ package com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +26,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,6 +39,7 @@ public class TeacherUpdate extends AppCompatActivity {
     private EditText teacherName, teacherPassword, teacherContact;
     private Spinner teacherPost;
     private LinearLayout teacherUpdateBtn;
+    private ProgressBar progressBar;
     private String name, post, contact, pass, gotTeacherEmail, gotName, gotPost, gotPassword, gotContact;
 
     @Override
@@ -56,6 +62,7 @@ public class TeacherUpdate extends AppCompatActivity {
         teacherContact = findViewById(R.id.teacherUpdate_newContact);
         teacherPost = findViewById(R.id.teacherUpdate_newPost);
         teacherUpdateBtn = findViewById(R.id.teacherUpdate_updateBtn);
+        progressBar = findViewById(R.id.teacherUpdate_progressbar);
 
         teacherNameInTop.setText(gotName);
         teacherName.setText(gotName);
@@ -90,6 +97,9 @@ public class TeacherUpdate extends AppCompatActivity {
             }
         });
 
+        final String updateSuccess = getResources().getString(R.string.teacherUpdate_updateSuccess);
+        final String somethingWrong = getResources().getString(R.string.teacherUpdate_somethingWrong);
+
         teacherUpdateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,18 +107,40 @@ public class TeacherUpdate extends AppCompatActivity {
                 pass = teacherPassword.getText().toString();
                 contact = teacherContact.getText().toString();
 
+                progressBar.setVisibility(View.VISIBLE);
                 RequestQueue requestQueue = Volley.newRequestQueue(TeacherUpdate.this);
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Update,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Toast.makeText(TeacherUpdate.this, "আপডেট সফল হয়েছে", Toast.LENGTH_SHORT).show();
+
+                                try {
+                                    progressBar.setVisibility(View.GONE);
+                                    JSONObject jsonObject = new JSONObject(response);
+                                    String Response = jsonObject.getString("response");
+
+
+                                        if (Response.equals("success")){
+                                            Toast.makeText(TeacherUpdate.this, updateSuccess, Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(TeacherUpdate.this, TeacherLoggedIn.class);
+                                            intent.putExtra("t_email", gotTeacherEmail);
+                                            startActivity(intent);
+                                            finish();
+                                            overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+                                        } else {
+                                            Toast.makeText(TeacherUpdate.this, somethingWrong, Toast.LENGTH_SHORT).show();
+                                        }
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }, new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(TeacherUpdate.this, error.toString(), Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+                        Toast.makeText(TeacherUpdate.this, somethingWrong, Toast.LENGTH_SHORT).show();
                     }
                 }) {
                     @Override
@@ -123,10 +155,7 @@ public class TeacherUpdate extends AppCompatActivity {
                     }
                 };
                 requestQueue.add(stringRequest);
-                Intent in = new Intent(TeacherUpdate.this, TeacherLoggedIn.class);
-                in.putExtra("t_email", gotTeacherEmail);
-                overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
-                startActivity(in);
+
             }
         });
     }

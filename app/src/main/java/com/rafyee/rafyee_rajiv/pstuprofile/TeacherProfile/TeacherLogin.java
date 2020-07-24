@@ -2,6 +2,7 @@ package com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -24,6 +25,8 @@ import com.google.android.material.snackbar.Snackbar;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
 import com.rafyee.rafyee_rajiv.pstuprofile.MainActivity;
 
+import net.igenius.customcheckbox.CustomCheckBox;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,10 +34,10 @@ public class TeacherLogin extends AppCompatActivity {
 
     private EditText teacherEmail, teacherPassword;
     private Button teacherLoginBtn;
-    private TextView teacherRegistration;
+    private TextView teacherRegistration, forgotPassword;
     private Snackbar snackbar;
     private ProgressBar progressBar;
-//    private CheckBox showPassword;
+    private CustomCheckBox showPassword;
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
 
     @Override
@@ -47,20 +50,28 @@ public class TeacherLogin extends AppCompatActivity {
         teacherEmail = findViewById(R.id.teacherLogin_teacherEmail);
         teacherPassword = findViewById(R.id.teacherLogin_teacherPassword);
         progressBar = findViewById(R.id.teacherLogin_progressbar);
-        /*showPassword = findViewById(R.id.teacherLogin_showPassword);*/
+        showPassword = findViewById(R.id.teacherLogin_checkBox);
         teacherLoginBtn = findViewById(R.id.teacherLogin_LoginBtn);
         teacherRegistration = findViewById(R.id.teacherLogin_teacherSignUp);
+        forgotPassword = findViewById(R.id.teacherLogin_forgotPassword);
 
-        /*showPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        showPassword.setOnCheckedChangeListener(new CustomCheckBox.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+            public void onCheckedChanged(CustomCheckBox checkBox, boolean isChecked) {
+                if (isChecked) {
                     teacherPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                }else {
+                } else {
                     teacherPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }
             }
-        });*/
+        });
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(TeacherLogin.this, getResources().getString(R.string.inDevelopment), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         teacherLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

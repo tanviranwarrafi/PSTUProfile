@@ -184,43 +184,61 @@
         app:layout_constraintStart_toStartOf="@+id/teacherUpdate_newPassword"
         app:layout_constraintTop_toBottomOf="@+id/teacherUpdate_newPassword" />
 
+
     <LinearLayout
-        android:id="@+id/teacherUpdate_updateBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/round_bg"
-        android:backgroundTint="@color/amber_primary_dark"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teacherUpdate_newContact">
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+        <ProgressBar
+            android:id="@+id/teacherUpdate_progressbar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/update"
-            android:tint="@color/white" />
+            android:visibility="gone" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/teacherUpdate_updateBtn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/bensen_handwriting"
+            android:background="@drawable/round_bg"
+            android:backgroundTint="@color/amber_primary_dark"
             android:gravity="center"
-            android:text="@string/teacherUpdate_update"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/update"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bensen_handwriting"
+                android:gravity="center"
+                android:text="@string/teacherUpdate_update"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -43,6 +44,18 @@ public class StudentLoggedIn extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        loadStudentData();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadStudentData();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_logged_in);
@@ -50,6 +63,7 @@ public class StudentLoggedIn extends AppCompatActivity {
 
         Intent intent = getIntent();
         gotID = intent.getExtras().getString("Id_no");
+        Log.d("success", "rafi: "+gotID);
 
         studentName = findViewById(R.id.studentLoggedIn_studentName);
         studentID = findViewById(R.id.studentLoggedIn_studentID);
@@ -62,7 +76,6 @@ public class StudentLoggedIn extends AppCompatActivity {
         goToStudentUpdate = findViewById(R.id.studentLoggedIn_studentUpdateBtn);
 
         loadStudentData();
-
     }
 
     private void loadStudentData() {

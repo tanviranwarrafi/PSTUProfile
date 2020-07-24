@@ -60,6 +60,35 @@
         app:layout_constraintStart_toStartOf="@+id/studentLogin_studentID"
         app:layout_constraintTop_toBottomOf="@+id/studentLogin_studentID" />
 
+    <net.igenius.customcheckbox.CustomCheckBox
+        android:id="@+id/studentLogin_checkBox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:color_checked="@color/colorAccent"
+        app:color_tick="@color/white"
+        app:color_unchecked="@color/white"
+        app:color_unchecked_stroke="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@+id/studentLogin_studentPassword"
+        app:layout_constraintTop_toBottomOf="@+id/studentLogin_studentPassword"
+        app:small_tick="false"
+        app:stroke_width="2dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/bensen_handwriting"
+        android:text="@string/studentLogin_rememberpassword"
+        android:textColor="@color/colorText"
+        android:textSize="32px"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/studentLogin_checkBox"
+        app:layout_constraintStart_toEndOf="@+id/studentLogin_checkBox"
+        app:layout_constraintTop_toTopOf="@+id/studentLogin_checkBox" />
+
     <TextView
         android:id="@+id/studentLogin_forgotPassword"
         android:layout_width="wrap_content"
@@ -113,6 +142,7 @@
         app:layout_constraintTop_toTopOf="@+id/studentLogin_loginBtn" />
 
     <LinearLayout
+        android:id="@+id/linearLayout8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

@@ -4,9 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,6 +28,9 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
 import com.rafyee.rafyee_rajiv.pstuprofile.MainActivity;
+import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLogin;
+
+import net.igenius.customcheckbox.CustomCheckBox;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,8 +41,8 @@ public class StudentLogin extends AppCompatActivity {
     private EditText studentId, studentPassword;
     private Snackbar snackbar;
     private ProgressBar progressBar;
-    /* private CheckBox showPassword;*/
-    private TextView signUpPlease;
+     private CustomCheckBox showPassword;
+    private TextView signUpPlease, forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,20 +54,28 @@ public class StudentLogin extends AppCompatActivity {
         studentId = findViewById(R.id.studentLogin_studentID);
         studentPassword = findViewById(R.id.studentLogin_studentPassword);
         progressBar = findViewById(R.id.studentLogin_progressbar);
-        /*showPassword = findViewById(R.id.studentLogin_showPassword);*/
+        showPassword = findViewById(R.id.studentLogin_checkBox);
         studentLoginBtn = findViewById(R.id.studentLogin_loginBtn);
         signUpPlease = findViewById(R.id.studentLogin_studentSignUp);
+        forgotPassword = findViewById(R.id.studentLogin_forgotPassword);
 
-        /*showPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onClick(View view) {
+                Toast.makeText(StudentLogin.this, getResources().getString(R.string.inDevelopment), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        showPassword.setOnCheckedChangeListener(new CustomCheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CustomCheckBox checkBox, boolean isChecked) {
                 if (isChecked) {
                     studentPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                 } else {
                     studentPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }
             }
-        });*/
+        });
 
         studentLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

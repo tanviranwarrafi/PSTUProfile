@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -46,8 +47,7 @@ public class TeacherSignUp extends AppCompatActivity {
     private ProgressBar progressBar;
     private Button teacherSignUpBtn;
     private TextView gotoSignIn;
-    private String teacher_name, teacher_post, teacher_faculty, teacher_department,
-            teacher_email, teacher_contact, teacher_password;
+    private String teacher_post, teacher_faculty, teacher_department;
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -282,6 +282,9 @@ public class TeacherSignUp extends AppCompatActivity {
 
         String emailError = getResources().getString(R.string.teacherSignUp_emailError);
         String contactError = getResources().getString(R.string.teacherSignUp_contactError);
+        final String registeredEmail = getResources().getString(R.string.teacherSignUp_registeredEmail);
+        final String registrationSuccess = getResources().getString(R.string.teacherSignUp_registrationSuccess);
+        final String somethingWrong = getResources().getString(R.string.teacherSignUp_somethingWrong);
 
         Drawable customErrorIcon = getResources().getDrawable(R.drawable.error_24);
         customErrorIcon.setBounds(0,0,customErrorIcon.getIntrinsicWidth(),customErrorIcon.getIntrinsicHeight());
@@ -299,22 +302,19 @@ public class TeacherSignUp extends AppCompatActivity {
                                     JSONObject jsonObject = new JSONObject(response);
                                     String Response = jsonObject.getString("response");
 
-                                    /*Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();*/
-                                    Intent intent = new Intent(TeacherSignUp.this, TeacherLogin.class);
-                                    startActivity(intent);
-                                    finish();
-                                    overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
-
-                                        /*if (Response == "registered") {
-                                            Toast.makeText(StudentSignUp.this, "Already registered", Toast.LENGTH_SHORT).show();
-                                            Log.d("registered id:", "onResponse: " + Response);
-                                        }else {
-                                            Toast.makeText(StudentSignUp.this, Response, Toast.LENGTH_SHORT).show();
-                                            Intent intent = new Intent(StudentSignUp.this, StudentLogin.class);
+                                    if (Response.equals("registered")) {
+                                        Toast.makeText(TeacherSignUp.this, registeredEmail, Toast.LENGTH_SHORT).show();
+                                    }else {
+                                        if (Response.equals("success")){
+                                            Toast.makeText(TeacherSignUp.this, registrationSuccess, Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(TeacherSignUp.this, TeacherLogin.class);
                                             startActivity(intent);
                                             finish();
-                                            overridePendingTransition(R.anim.slide_from_right,R.anim.slideout_from_left);
-                                        }*/
+                                            overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+                                        } else {
+                                            Toast.makeText(TeacherSignUp.this, somethingWrong, Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -325,6 +325,7 @@ public class TeacherSignUp extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         progressBar.setVisibility(View.GONE);
+                        Toast.makeText(TeacherSignUp.this, somethingWrong, Toast.LENGTH_SHORT).show();
                     }
                 }) {
                     @Override

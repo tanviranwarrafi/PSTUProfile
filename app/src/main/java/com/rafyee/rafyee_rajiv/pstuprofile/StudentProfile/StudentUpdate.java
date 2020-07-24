@@ -1,14 +1,13 @@
 package com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +22,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
 import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLoggedIn;
-import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherUpdate;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +34,7 @@ public class StudentUpdate extends AppCompatActivity {
     private ImageView backButton;
     private EditText studentName, studentPassword, studentContactNo, studentEmail;
     private LinearLayout updateStudent;
+    private ProgressBar progressBar;
     private String name, password, contact, email,
             gotStudentId, gotNmae, gotPassword, gotContact, gotEmail;
 
@@ -54,7 +56,8 @@ public class StudentUpdate extends AppCompatActivity {
         studentName = findViewById(R.id.studentUpdate_newName);
         studentPassword = findViewById(R.id.studentUpdate_newPassword);
         studentContactNo = findViewById(R.id.studentUpdate_newContactNo);
-        studentEmail = findViewById(R.id.studentUpdatestudentLoggedInPersonalUpdate_newEmail);
+        studentEmail = findViewById(R.id.studentUpdate_newEmail);
+        progressBar = findViewById(R.id.studentUpdate_progressbar);
 
         studentName.setText(gotNmae);
         studentPassword.setText(gotPassword);
@@ -72,6 +75,9 @@ public class StudentUpdate extends AppCompatActivity {
             }
         });
 
+        final String updateSuccess = getResources().getString(R.string.studentUpdate_updateSuccess);
+        final String somethingWrong = getResources().getString(R.string.studentUpdate_somethingWrong);
+
         updateStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,17 +86,39 @@ public class StudentUpdate extends AppCompatActivity {
                 password = studentPassword.getText().toString();
                 email = studentEmail.getText().toString();
 
+                progressBar.setVisibility(View.VISIBLE);
                 RequestQueue requestQueue = Volley.newRequestQueue(StudentUpdate.this);
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Student_Update,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Toast.makeText(StudentUpdate.this,  "আপডেট সফল হয়েছে", Toast.LENGTH_SHORT).show();
+
+                                try {
+                                    progressBar.setVisibility(View.GONE);
+                                    JSONObject jsonObject = new JSONObject(response);
+                                    String Response = jsonObject.getString("response");
+
+                                    if (Response.equals("success")){
+                                        Log.d("success", Response);
+                                        Toast.makeText(StudentUpdate.this, updateSuccess, Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(StudentUpdate.this, StudentLoggedIn.class);
+                                        intent.putExtra("Id_no", gotStudentId);
+                                        startActivity(intent);
+                                        finish();
+                                        overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
+                                    } else {
+                                        Toast.makeText(StudentUpdate.this, somethingWrong, Toast.LENGTH_SHORT).show();
+                                    }
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }, new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        progressBar.setVisibility(View.GONE);
                         Toast.makeText(StudentUpdate.this, error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
@@ -106,10 +134,7 @@ public class StudentUpdate extends AppCompatActivity {
                     }
                 };
                 requestQueue.add(stringRequest);
-                Intent in = new Intent(StudentUpdate.this, StudentLoggedIn.class);
-                in.putExtra("Id_no", gotStudentId);
-                overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
-                startActivity(in);
+
             }
         });
     }
