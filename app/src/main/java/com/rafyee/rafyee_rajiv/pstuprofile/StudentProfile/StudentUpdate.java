@@ -21,7 +21,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rafyee.rafyee_rajiv.pstuprofile.Config;
-import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLoggedIn;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,8 +34,9 @@ public class StudentUpdate extends AppCompatActivity {
     private EditText studentName, studentPassword, studentContactNo, studentEmail;
     private LinearLayout updateStudent;
     private ProgressBar progressBar;
-    private String name, password, contact, email,
-            gotStudentId, gotNmae, gotPassword, gotContact, gotEmail;
+    private String name, password, contact, email, gotNmae, gotPassword, gotContact, gotEmail;
+    String gotStudentId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,8 @@ public class StudentUpdate extends AppCompatActivity {
         gotPassword = intent.getExtras().getString("password");
         gotContact = intent.getExtras().getString("contact");
         gotEmail = intent.getExtras().getString("email");
+
+        Log.d("success", "check" + gotStudentId);
 
         backButton = findViewById(R.id.studentUpdate_backButton);
         updateStudent = findViewById(R.id.studentUpdate_studentUpdateBtn);
@@ -134,16 +136,15 @@ public class StudentUpdate extends AppCompatActivity {
                     }
                 };
                 requestQueue.add(stringRequest);
-
             }
         });
     }
 
     public void onBackPressed() {
-        Intent intent = new Intent(StudentUpdate.this, TeacherLoggedIn.class);
-        intent.putExtra("Id_no", gotStudentId);
-        Log.d("onBackPressed", gotStudentId);
-        startActivity(intent);
+        Intent backKeyIntent = new Intent(StudentUpdate.this, StudentLoggedIn.class);
+        backKeyIntent.putExtra("Id_no", gotStudentId);
+        Log.d("success", "onBackPressed" + gotStudentId);
+        startActivity(backKeyIntent);
         finish();
         overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);
         super.onBackPressed();

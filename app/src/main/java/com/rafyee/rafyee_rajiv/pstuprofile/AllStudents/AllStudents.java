@@ -142,7 +142,11 @@ public class AllStudents extends AppCompatActivity {
     }
 
     private void showAllStudent() {
+
+        final String noDataRecorded = getResources().getString(R.string.noDataRecorded);
+        final String poorInternetConnection = getResources().getString(R.string.poorInternetConnection);
         progressBar.setVisibility(View.VISIBLE);
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.All_Students,
                 new Response.Listener<String>() {
                     @Override
@@ -154,7 +158,7 @@ public class AllStudents extends AppCompatActivity {
                             jsonObject = new JSONObject(response);
                             jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
                             if (jsonArray.length() == 0) {
-                                Toast.makeText(AllStudents.this, "No Data Recorded", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AllStudents.this, noDataRecorded, Toast.LENGTH_SHORT).show();
                             } else {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject object = jsonArray.getJSONObject(i);
@@ -182,7 +186,7 @@ public class AllStudents extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressBar.setVisibility(View.GONE);
-                Toast.makeText(AllStudents.this, error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(AllStudents.this, poorInternetConnection, Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override

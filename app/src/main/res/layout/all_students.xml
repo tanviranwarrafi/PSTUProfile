@@ -9,7 +9,7 @@
     <View
         android:id="@+id/topView"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
     <View
         android:id="@+id/view5"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="90dp"
         android:background="@drawable/wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +107,6 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/round_bg"
         android:backgroundTint="@color/amber_primary_dark"
         android:fontFamily="@font/bensen_handwriting"
@@ -118,7 +117,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/allStudents_batchSpinner"
         app:layout_constraintTop_toBottomOf="@+id/allStudents_batchSpinner" />
 
     <ListView

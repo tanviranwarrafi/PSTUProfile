@@ -163,6 +163,7 @@ public class TeacherUpdate extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(TeacherUpdate.this, TeacherLoggedIn.class);
         intent.putExtra("t_email", gotTeacherEmail);
+        Log.d("success", "onBackPressed" + gotTeacherEmail);
         startActivity(intent);
         finish();
         overridePendingTransition(R.anim.slide_from_right, R.anim.slideout_from_left);

@@ -21,6 +21,7 @@ import com.rafyee.rafyee_rajiv.pstuprofile.Config;
 import com.rafyee.rafyee_rajiv.pstuprofile.MainActivity;
 import com.rafyee.rafyee_rajiv.pstuprofile.Models.StudentUnit;
 import com.rafyee.rafyee_rajiv.pstuprofile.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,26 +45,10 @@ public class StudentLoggedIn extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-        loadStudentData();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        loadStudentData();
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_logged_in);
         getSupportActionBar().hide();
-
-        Intent intent = getIntent();
-        gotID = intent.getExtras().getString("Id_no");
-        Log.d("success", "rafi: "+gotID);
 
         studentName = findViewById(R.id.studentLoggedIn_studentName);
         studentID = findViewById(R.id.studentLoggedIn_studentID);
@@ -75,10 +60,19 @@ public class StudentLoggedIn extends AppCompatActivity {
         studentEmail = findViewById(R.id.studentLoggedIn_studentEmailAddress);
         goToStudentUpdate = findViewById(R.id.studentLoggedIn_studentUpdateBtn);
 
+        Intent intent = getIntent();
+        gotID = intent.getExtras().getString("Id_no");
+        Log.d("success", "id: " + gotID);
+
         loadStudentData();
     }
 
     private void loadStudentData() {
+
+        final String noDataRecorded = getResources().getString(R.string.noDataRecorded);
+        final String poorInternetConnection = getResources().getString(R.string.poorInternetConnection);
+
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Student_Details,
                 new Response.Listener<String>() {
                     @Override
@@ -88,7 +82,7 @@ public class StudentLoggedIn extends AppCompatActivity {
                             jsonObject = new JSONObject(response);
                             jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
                             if (jsonArray.length() == 0) {
-                                Toast.makeText(StudentLoggedIn.this, "No Data Recorded", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(StudentLoggedIn.this, noDataRecorded, Toast.LENGTH_SHORT).show();
                             } else {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject object = jsonArray.getJSONObject(i);
@@ -130,7 +124,7 @@ public class StudentLoggedIn extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(StudentLoggedIn.this, poorInternetConnection, Toast.LENGTH_SHORT).show();
                     }
                 }
         ) {

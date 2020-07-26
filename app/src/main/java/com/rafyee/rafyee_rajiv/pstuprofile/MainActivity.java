@@ -1,16 +1,11 @@
 package com.rafyee.rafyee_rajiv.pstuprofile;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +18,6 @@ import com.rafyee.rafyee_rajiv.pstuprofile.AllStudents.AllStudents;
 import com.rafyee.rafyee_rajiv.pstuprofile.AllTeachers.AllTeachers;
 import com.rafyee.rafyee_rajiv.pstuprofile.Cources.CourseFaculty;
 import com.rafyee.rafyee_rajiv.pstuprofile.Developer.Developer;
-import com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentLoggedIn;
 import com.rafyee.rafyee_rajiv.pstuprofile.StudentProfile.StudentLogin;
 import com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile.TeacherLogin;
 
@@ -49,11 +43,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
         Window window = this.getWindow();
-        window.setStatusBarColor(ContextCompat.getColor(this,R.color.amber_primary_dark));
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.colorFlower));
 
         imageSlider = findViewById(R.id.mainActivity_imageSlider);
         studentLogin = findViewById(R.id.mainActivity_studentLogin);
@@ -173,22 +166,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private Boolean exit = false;
-
     @Override
     public void onBackPressed() {
-        if (exit) {
-            finish(); // finish activity
-        } else {
-            Toast.makeText(this, "Press Back again to Exit.",
-                    Toast.LENGTH_SHORT).show();
-            exit = true;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    exit = false;
-                }
-            }, 3 * 1000);
-        }
+        finish();
+        super.onBackPressed();
     }
 }

@@ -2,6 +2,7 @@ package com.rafyee.rafyee_rajiv.pstuprofile.TeacherProfile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -60,12 +61,17 @@ public class TeacherLoggedIn extends AppCompatActivity {
 
         Intent intent = getIntent();
         gotTeacherEmail = intent.getExtras().getString("t_email");
+        Log.d("success", "rrrr" + gotTeacherEmail);
 
         loadteacherData();
 
     }
 
     private void loadteacherData() {
+
+        final String noDataRecorded = getResources().getString(R.string.noDataRecorded);
+        final String poorInternetConnection = getResources().getString(R.string.noDataRecorded);
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.Teacher_Details,
                 new Response.Listener<String>() {
                     @Override
@@ -75,7 +81,7 @@ public class TeacherLoggedIn extends AppCompatActivity {
                             jsonObject = new JSONObject(response);
                             jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
                             if (jsonArray.length() == 0) {
-                                Toast.makeText(TeacherLoggedIn.this, "No Data Recorded", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TeacherLoggedIn.this, noDataRecorded, Toast.LENGTH_SHORT).show();
                             } else {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject object = jsonArray.getJSONObject(i);
@@ -113,7 +119,7 @@ public class TeacherLoggedIn extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(TeacherLoggedIn.this, poorInternetConnection, Toast.LENGTH_SHORT).show();
                     }
                 }
         ) {

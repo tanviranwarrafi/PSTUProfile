@@ -341,9 +341,9 @@ public class Dean extends AppCompatActivity {
         bba_dean_fax = getResources().getString(R.string.bba_dean_fax);
         bba_dean_address = getResources().getString(R.string.bba_dean_address);
 
-        fisharies_dean_name = getResources().getString(R.string.cse_dean_name);
+        fisharies_dean_name = getResources().getString(R.string.fisharies_dean_name);
         fisharies_dean_designation = getResources().getString(R.string.fisharies_dean_designation);
-        fisharies_dean_contact = getResources().getString(R.string.cse_dean_name);
+        fisharies_dean_contact = getResources().getString(R.string.fisharies_dean_contact);
         fisharies_dean_email = getResources().getString(R.string.fisharies_dean_email);
         fisharies_dean_fax = getResources().getString(R.string.fisharies_dean_fax);
         fisharies_dean_address = getResources().getString(R.string.fisharies_dean_address);

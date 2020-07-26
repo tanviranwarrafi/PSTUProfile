@@ -76,7 +76,7 @@ public class CourseAdapter extends BaseAdapter {
                 TextView dialogCourseCredit = courseDialog.findViewById(R.id.dialogCourse_courseCredit);
                 TextView dialogCourseCode = courseDialog.findViewById(R.id.dialogCourse_courseCode);
                 dialogCourseTitle.setText(course_title);
-                dialogCourseCode.setText(course_code + " Credit Hour");
+                dialogCourseCode.setText(course_code);
                 dialogCourseCredit.setText(course_credit);
 
                 courseDialog.show();

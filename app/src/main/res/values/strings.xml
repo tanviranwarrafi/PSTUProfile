@@ -4,6 +4,8 @@
     <string name="title_name">Attention!!</string>
     <string name="message">Do you want to update or delete</string>
     <string name="inDevelopment">ফিচারটি এখনো ডেভেলপমেন্ট এ আছে</string>
+    <string name="noDataRecorded">কোন ডাটা পাওয়া যায় নি</string>
+    <string name="poorInternetConnection"> দুর্বল ইন্টারনেট কানেকশন</string>
 
 
     <!-- Main Activity -->
@@ -196,7 +198,7 @@
     <!-- Student SignUp -->
     <string name="studentSignUp_dontHaveAnyAccount">আপনার কোন অ্যাকাউন্ট নেই?</string>
     <string name="studentSignUp_studentName">ছাত্র-ছাত্রীর নাম*</string>
-    <string name="studentSignUp_campusId">ক্যাম্পাস আইডি নম্বর*</string>
+    <string name="studentSignUp_campusId">ক্যাম্পাস আইডি নম্বর (৭ ডিজিট)*</string>
     <string name="studentSignUp_registrationNo">রেজিস্ট্রেশন নম্বর*</string>
     <string name="studentSignUp_password">পাসওয়ার্ড*</string>
     <string name="studentSignUp_selectFaculty">ফ্যাকাল্টি সিলেক্ট করুন* </string>

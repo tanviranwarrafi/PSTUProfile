@@ -182,7 +182,7 @@
                         android:layout_marginTop="30dp"
                         android:background="@color/colorGrassDark"
                         android:padding="8dp"
-                        android:text="সকল শিক্ষক"
+                        android:text="@string/mainActivity_allTeacher"
                         android:fontFamily="@font/bensen_handwriting"
                         android:textStyle="bold"
                         android:textAlignment="center"

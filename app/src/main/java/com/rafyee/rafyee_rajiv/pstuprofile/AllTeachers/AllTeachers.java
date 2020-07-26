@@ -157,7 +157,6 @@ public class AllTeachers extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 department = parent.getItemAtPosition(position).toString();
-                //Toast.makeText(StudentRegistration.this, position , Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -169,6 +168,10 @@ public class AllTeachers extends AppCompatActivity {
         showTeacherBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                final String noDataRecorded = getResources().getString(R.string.noDataRecorded);
+                final String poorInternetConnection = getResources().getString(R.string.poorInternetConnection);
+
                 progressBar.setVisibility(View.VISIBLE);
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.All_Teachers,
                         new Response.Listener<String>() {
@@ -181,7 +184,7 @@ public class AllTeachers extends AppCompatActivity {
                                     jsonObject = new JSONObject(response);
                                     jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
                                     if (jsonArray.length() == 0) {
-                                        Toast.makeText(AllTeachers.this, "No Data Recorded", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(AllTeachers.this, noDataRecorded, Toast.LENGTH_SHORT).show();
                                     } else {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject object = jsonArray.getJSONObject(i);
@@ -208,7 +211,7 @@ public class AllTeachers extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         progressBar.setVisibility(View.GONE);
-                        Toast.makeText(AllTeachers.this, error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AllTeachers.this, poorInternetConnection, Toast.LENGTH_SHORT).show();
                     }
                 }) {
                     @Override
